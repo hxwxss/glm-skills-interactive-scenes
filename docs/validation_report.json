@@ -1,0 +1,37 @@
+{
+ "gates": {
+  "G1": {
+   "passed": true,
+   "issues": []
+  },
+  "G2": {
+   "passed": true,
+   "issues": []
+  },
+  "G3": {
+   "passed": true,
+   "issues": []
+  },
+  "G4": {
+   "passed": true,
+   "issues": []
+  }
+ },
+ "issues": [],
+ "stats": {
+  "ir_objects": 104,
+  "ir_joints": 19,
+  "g2_pair_penetrations": 0,
+  "g3_samples_checked": 18,
+  "g3_penetrations": 0,
+  "g4_min_clearance_m": 0.07,
+  "g4_worst_obstacle": [
+   "console_top",
+   [
+    9.04,
+    2.62,
+    0.0
+   ]
+  ]
+ }
+}

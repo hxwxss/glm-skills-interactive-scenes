@@ -1,0 +1,4492 @@
+{
+ "schema_version": "1.2.0",
+ "generator": "interactive_kitchen_agent_project/scripts/build_scene.py",
+ "blender_version": "4.1.1",
+ "generated_utc": "2026-09-01T07:23:00+00:00",
+ "units": "meters",
+ "coordinate_convention": "Z-up, +X east, +Y north, origin at interior SW floor corner",
+ "room": {
+  "interior_dimensions": [
+   9.8,
+   7.4,
+   3.0
+  ],
+  "wall_thickness": 0.15,
+  "floor_level_z": 0.0,
+  "openings": [
+   {
+    "id": "west_window",
+    "x": [
+     0,
+     0
+    ],
+    "y": [
+     2.45,
+     3.35
+    ],
+    "z": [
+     1.15,
+     2.35
+    ],
+    "kind": "window"
+   },
+   {
+    "id": "terrace_glazing",
+    "x": [
+     2.8,
+     8.6
+    ],
+    "y": [
+     7.4,
+     7.55
+    ],
+    "z": [
+     0.0,
+     2.7
+    ],
+    "kind": "sliding_glass_wall"
+   },
+   {
+    "id": "entry_door",
+    "x": [
+     9.8,
+     9.95
+    ],
+    "y": [
+     3.35,
+     4.35
+    ],
+    "z": [
+     0.0,
+     2.15
+    ],
+    "kind": "door"
+   },
+   {
+    "id": "pantry_doorway",
+    "x": [
+     8.35,
+     9.25
+    ],
+    "y": [
+     2.28,
+     2.4
+    ],
+    "z": [
+     0.0,
+     2.1
+    ],
+    "kind": "sliding_panel"
+   }
+  ],
+  "navigation_zones": [
+   {
+    "id": "zone_kitchen_aisle",
+    "poly": [
+     [
+      0.65,
+      1.8
+     ],
+     [
+      1.75,
+      1.8
+     ],
+     [
+      1.75,
+      5.6
+     ],
+     [
+      0.65,
+      5.6
+     ]
+    ]
+   },
+   {
+    "id": "zone_south_spine",
+    "poly": [
+     [
+      0.3,
+      0.8
+     ],
+     [
+      8.1,
+      0.8
+     ],
+     [
+      8.1,
+      3.2
+     ],
+     [
+      0.3,
+      3.2
+     ]
+    ]
+   },
+   {
+    "id": "zone_central",
+    "poly": [
+     [
+      2.85,
+      3.2
+     ],
+     [
+      4.9,
+      3.2
+     ],
+     [
+      4.9,
+      5.15
+     ],
+     [
+      2.85,
+      5.15
+     ]
+    ]
+   },
+   {
+    "id": "zone_dining",
+    "poly": [
+     [
+      4.4,
+      4.2
+     ],
+     [
+      7.6,
+      4.2
+     ],
+     [
+      7.6,
+      7.3
+     ],
+     [
+      4.4,
+      7.3
+     ]
+    ]
+   },
+   {
+    "id": "zone_entry",
+    "poly": [
+     [
+      7.9,
+      2.5
+     ],
+     [
+      9.7,
+      2.5
+     ],
+     [
+      9.7,
+      5.2
+     ],
+     [
+      7.9,
+      5.2
+     ]
+    ]
+   },
+   {
+    "id": "zone_pantry",
+    "poly": [
+     [
+      8.32,
+      0.12
+     ],
+     [
+      9.68,
+      0.12
+     ],
+     [
+      9.68,
+      2.28
+     ],
+     [
+      8.32,
+      2.28
+     ]
+    ]
+   }
+  ]
+ },
+ "objects": {
+  "floor_slab": {
+   "stable_id": "floor_slab",
+   "blender_name": "floor_slab",
+   "category": "architecture",
+   "semantic_role": "fixture",
+   "collection": "ARCH",
+   "dimensions": [
+    10.100000000000001,
+    7.7,
+    0.12
+   ],
+   "material_class": "oak_floor",
+   "static": true,
+   "mass_estimate_kg": 8000,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    4.9,
+    3.7,
+    -0.06
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "ceiling_slab": {
+   "stable_id": "ceiling_slab",
+   "blender_name": "ceiling_slab",
+   "category": "architecture",
+   "semantic_role": "fixture",
+   "collection": "ARCH",
+   "dimensions": [
+    10.100000000000001,
+    7.7,
+    0.12
+   ],
+   "material_class": "ceiling_white",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    4.9,
+    3.7,
+    3.06
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "entry_door": {
+   "stable_id": "entry_door",
+   "blender_name": "entry_door_leaf",
+   "category": "architecture",
+   "semantic_role": "container",
+   "collection": "ARCH",
+   "dimensions": [
+    0.045,
+    0.9539999999999995,
+    2.13
+   ],
+   "material_class": "oak",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.875,
+    4.33,
+    1.075
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    -24.0
+   ]
+  },
+  "entry_tile_zone": {
+   "stable_id": "entry_tile_zone",
+   "blender_name": "entry_tile_zone",
+   "category": "architecture",
+   "semantic_role": "fixture",
+   "collection": "ARCH",
+   "dimensions": [
+    1.9000000000000004,
+    2.8000000000000003,
+    0.002
+   ],
+   "material_class": "stone_tile",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    8.85,
+    3.8,
+    0.001
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "doormat": {
+   "stable_id": "doormat",
+   "blender_name": "doormat",
+   "category": "props",
+   "semantic_role": "visual_only",
+   "collection": "ARCH",
+   "dimensions": [
+    0.75,
+    0.5,
+    0.012
+   ],
+   "material_class": "doormat",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.05,
+    3.85,
+    0.008
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "worktop_west_0": {
+   "stable_id": "worktop_west_0",
+   "blender_name": "wr_worktop_0",
+   "category": "architecture",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.665,
+    0.8699999999999999,
+    0.03
+   ],
+   "material_class": "stone_worktop",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3325,
+    2.235,
+    0.885
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "worktop_west_1": {
+   "stable_id": "worktop_west_1",
+   "blender_name": "wr_worktop_1",
+   "category": "architecture",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.665,
+    4.2700000000000005,
+    0.03
+   ],
+   "material_class": "stone_worktop",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3325,
+    5.265,
+    0.885
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "bin_paper": {
+   "stable_id": "bin_paper",
+   "blender_name": "bin_paper_B",
+   "category": "cabinetry",
+   "semantic_role": "receptacle",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.5,
+    0.25,
+    0.42
+   ],
+   "material_class": "bin_grey",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "waste_pullout_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    -0.53,
+    -0.14,
+    -0.09
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "bin_plastic": {
+   "stable_id": "bin_plastic",
+   "blender_name": "bin_plastic_B",
+   "category": "cabinetry",
+   "semantic_role": "receptacle",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.5,
+    0.25,
+    0.42
+   ],
+   "material_class": "bin_grey",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "waste_pullout_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    -0.53,
+    0.14,
+    -0.09
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "waste_pullout_door": {
+   "stable_id": "waste_pullout_door",
+   "blender_name": "waste_pullout_door",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.5939999999999999,
+    0.745
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "waste_pullout_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "sink_bowl": {
+   "stable_id": "sink_bowl",
+   "blender_name": "sink_bowl_B",
+   "category": "fixtures",
+   "semantic_role": "receptacle",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.58,
+    0.42,
+    0.19
+   ],
+   "material_class": "steel_brushed",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.34,
+    2.9,
+    0.68
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "faucet": {
+   "stable_id": "faucet",
+   "blender_name": "faucet_riser",
+   "category": "fixtures",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.06,
+    0.06,
+    0.35
+   ],
+   "material_class": "faucet_steel",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.1,
+    2.9,
+    1.04
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "dishwasher_body": {
+   "stable_id": "dishwasher_body",
+   "blender_name": "dw_body",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.6,
+    0.6000000000000001,
+    0.72
+   ],
+   "material_class": "steel_dark",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.32,
+    3.65,
+    0.46
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "dishwasher_rack_0": {
+   "stable_id": "dishwasher_rack_0",
+   "blender_name": "dw_rack_0",
+   "category": "appliances",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.48,
+    0.44000000000000006,
+    0.015
+   ],
+   "material_class": "steel_brushed",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3,
+    3.65,
+    0.62
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "dishwasher_door": {
+   "stable_id": "dishwasher_door",
+   "blender_name": "dishwasher_door",
+   "category": "appliances",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.02,
+    0.5940000000000001,
+    0.58
+   ],
+   "material_class": "steel_brushed",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.66,
+    3.65,
+    0.864
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "drawer_prep_1_front": {
+   "stable_id": "drawer_prep_1_front",
+   "blender_name": "drawer_prep_1_front",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.494,
+    0.136
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "drawer_prep_1_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "drawer_prep_2_front": {
+   "stable_id": "drawer_prep_2_front",
+   "blender_name": "drawer_prep_2_front",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.494,
+    0.29
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "drawer_prep_2_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "lower_door_a": {
+   "stable_id": "lower_door_a",
+   "blender_name": "wr_prep_door_a",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.494,
+    0.326
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.6595,
+    3.953,
+    0.276
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "lower_door_b": {
+   "stable_id": "lower_door_b",
+   "blender_name": "wr_prep_door_b",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.494,
+    0.751
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.6595,
+    4.947,
+    0.4885
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "cooktop": {
+   "stable_id": "cooktop",
+   "blender_name": "cooktop_glass",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.5900000000000001,
+    0.7199999999999999,
+    0.008
+   ],
+   "material_class": "cooktop_glass",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.325,
+    5.35,
+    0.901
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "hood": {
+   "stable_id": "hood",
+   "blender_name": "hood_box",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.5,
+    1.0,
+    0.42
+   ],
+   "material_class": "steel_brushed",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.25,
+    5.46,
+    1.78
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "oven_cavity": {
+   "stable_id": "oven_cavity",
+   "blender_name": "oven_cavity",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.55,
+    0.45999999999999996,
+    0.31999999999999984
+   ],
+   "material_class": "steel_dark",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.28,
+    6.73,
+    1.26
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "oven_door": {
+   "stable_id": "oven_door",
+   "blender_name": "oven_door",
+   "category": "appliances",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.024,
+    0.5799999999999992,
+    0.47
+   ],
+   "material_class": "steel_brushed",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.66,
+    6.73,
+    1.49
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "ovencol_top_door": {
+   "stable_id": "ovencol_top_door",
+   "blender_name": "wr_ovencol_top_door",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.6,
+    0.5899999999999999
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.6595,
+    7.397,
+    2.145
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "upper_door_a": {
+   "stable_id": "upper_door_a",
+   "blender_name": "up_door_a",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.494,
+    0.794
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3595,
+    3.953,
+    1.85
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "upper_door_b": {
+   "stable_id": "upper_door_b",
+   "blender_name": "up_door_b",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.494,
+    0.794
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3595,
+    4.947,
+    1.85
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "up_open_shelf": {
+   "stable_id": "up_open_shelf",
+   "blender_name": "up_open_shelf",
+   "category": "cabinetry",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.24,
+    0.7,
+    0.035
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.14,
+    2.15,
+    1.73
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "outlet_a": {
+   "stable_id": "outlet_a",
+   "blender_name": "outlet_a",
+   "category": "fixtures",
+   "semantic_role": "fixture",
+   "collection": "ARCH",
+   "dimensions": [
+    0.086,
+    0.086,
+    0.012
+   ],
+   "material_class": "ceramic_white",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.021,
+    4.2,
+    1.12
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "outlet_b": {
+   "stable_id": "outlet_b",
+   "blender_name": "outlet_b",
+   "category": "fixtures",
+   "semantic_role": "fixture",
+   "collection": "ARCH",
+   "dimensions": [
+    0.086,
+    0.086,
+    0.012
+   ],
+   "material_class": "ceramic_white",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.021,
+    6.1,
+    1.12
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fridge_cavity": {
+   "stable_id": "fridge_cavity",
+   "blender_name": "fridge_int_back",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    1.08,
+    0.58,
+    1.95
+   ],
+   "material_class": "steel_dark",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.75,
+    0.036,
+    1.655
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fridge_shelf_1": {
+   "stable_id": "fridge_shelf_1",
+   "blender_name": "fridge_shelf_1",
+   "category": "appliances",
+   "semantic_role": "container",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    1.02,
+    0.52,
+    0.014
+   ],
+   "material_class": "glass_low_iron",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.75,
+    0.3,
+    1.64
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fridge_door": {
+   "stable_id": "fridge_door",
+   "blender_name": "fridge_door",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    1.05,
+    0.045,
+    0.8
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.19,
+    0.662,
+    1.68
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "freezer_drawer_front": {
+   "stable_id": "freezer_drawer_front",
+   "blender_name": "freezer_drawer_front",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    1.05,
+    0.019,
+    1.14
+   ],
+   "material_class": "steel_brushed",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "freezer_drawer_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "tall_door_a": {
+   "stable_id": "tall_door_a",
+   "blender_name": "tall_door_a",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.441,
+    0.019,
+    2.327
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    1.353,
+    0.6595,
+    1.2765
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "tall_door_b": {
+   "stable_id": "tall_door_b",
+   "blender_name": "tall_door_b",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.441,
+    0.019,
+    2.327
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.247,
+    0.6595,
+    1.2765
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "island_worktop": {
+   "stable_id": "island_worktop",
+   "blender_name": "island_worktop",
+   "category": "cabinetry",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    1.12,
+    2.3999999999999995,
+    0.04
+   ],
+   "material_class": "stone_worktop",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.3,
+    4.4,
+    0.88
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "island_east_panel": {
+   "stable_id": "island_east_panel",
+   "blender_name": "island_east_panel",
+   "category": "cabinetry",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.022,
+    2.3999999999999995,
+    0.9
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.839,
+    4.4,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "island_niche_shelf": {
+   "stable_id": "island_niche_shelf",
+   "blender_name": "island_south_shelf",
+   "category": "cabinetry",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    1.06,
+    0.3,
+    0.03
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.3,
+    3.37,
+    0.42
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "drawer_island_1_front": {
+   "stable_id": "drawer_island_1_front",
+   "blender_name": "drawer_island_1_front",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.734,
+    0.14
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "drawer_island_1_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "drawer_island_2_front": {
+   "stable_id": "drawer_island_2_front",
+   "blender_name": "drawer_island_2_front",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.734,
+    0.29
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "drawer_island_2_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "island_door": {
+   "stable_id": "island_door",
+   "blender_name": "island_door",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.019,
+    0.78,
+    0.31
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    1.7405,
+    4.763,
+    0.268
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_counter": {
+   "stable_id": "pantry_counter",
+   "blender_name": "pantry_counter",
+   "category": "cabinetry",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    1.4400000000000022,
+    0.62,
+    0.04
+   ],
+   "material_class": "stone_worktop",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.06,
+    0.43,
+    0.88
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_drawer_front": {
+   "stable_id": "pantry_drawer_front",
+   "blender_name": "pantry_drawer_front",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.85,
+    0.019,
+    0.2
+   ],
+   "material_class": "cab_front_greige",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": "pantry_drawer_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_shelf_1": {
+   "stable_id": "pantry_shelf_1",
+   "blender_name": "pantry_shelf_E_1",
+   "category": "cabinetry",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    0.25,
+    1.4999999999999996,
+    0.028
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.675,
+    1.51,
+    1.1
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_slide_panel": {
+   "stable_id": "pantry_slide_panel",
+   "blender_name": "pantry_slide_panel",
+   "category": "cabinetry",
+   "semantic_role": "container",
+   "collection": "CABINETRY",
+   "dimensions": [
+    1.06,
+    0.04,
+    2.22
+   ],
+   "material_class": "oak_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    8.85,
+    2.46,
+    1.15
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "sideboard": {
+   "stable_id": "sideboard",
+   "blender_name": "sideboard_top",
+   "category": "furniture",
+   "semantic_role": "fixture",
+   "collection": "CABINETRY",
+   "dimensions": [
+    2.0,
+    0.45,
+    0.78
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    6.4,
+    0.235,
+    0.751
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "kettle": {
+   "stable_id": "kettle",
+   "blender_name": "kettle_body",
+   "category": "appliances",
+   "semantic_role": "tool",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.208,
+    0.208,
+    0.016
+   ],
+   "material_class": "steel_brushed",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.36,
+    6.23,
+    0.9
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "coffee_machine": {
+   "stable_id": "coffee_machine",
+   "blender_name": "coffee_body",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.24,
+    0.38,
+    0.36
+   ],
+   "material_class": "steel_dark",
+   "static": true,
+   "mass_estimate_kg": 9,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.34,
+    5.92,
+    1.09
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "toaster": {
+   "stable_id": "toaster",
+   "blender_name": "toaster_body",
+   "category": "appliances",
+   "semantic_role": "fixture",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.2,
+    0.3,
+    0.19
+   ],
+   "material_class": "steel_brushed",
+   "static": true,
+   "mass_estimate_kg": 2,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.1,
+    0.5,
+    0.995
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "milk_carton": {
+   "stable_id": "milk_carton",
+   "blender_name": "milk_carton",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.085,
+    0.085,
+    0.22
+   ],
+   "material_class": "milk_carton",
+   "static": false,
+   "mass_estimate_kg": 1.0,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.52,
+    0.28,
+    1.477
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fridge_bottle_0": {
+   "stable_id": "fridge_bottle_0",
+   "blender_name": "fridge_bottle_0",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.072,
+    0.072,
+    0.227
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3,
+    0.3,
+    1.377
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fridge_bottle_1": {
+   "stable_id": "fridge_bottle_1",
+   "blender_name": "fridge_bottle_1",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "APPLIANCES",
+   "dimensions": [
+    0.072,
+    0.072,
+    0.227
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.4,
+    0.3,
+    1.377
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "dining_table": {
+   "stable_id": "dining_table",
+   "blender_name": "dining_table_top",
+   "category": "furniture",
+   "semantic_role": "fixture",
+   "collection": "FURNITURE",
+   "dimensions": [
+    2.0,
+    0.95,
+    0.04
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": 42,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    5.9,
+    5.62,
+    0.73
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "chair_N1": {
+   "stable_id": "chair_N1",
+   "blender_name": "chair_N1_seat",
+   "category": "furniture",
+   "semantic_role": "obstacle",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.44,
+    0.44,
+    0.85
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "chair_N1_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "chair_N2": {
+   "stable_id": "chair_N2",
+   "blender_name": "chair_N2_seat",
+   "category": "furniture",
+   "semantic_role": "obstacle",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.44,
+    0.44,
+    0.85
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "chair_N2_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "chair_S1": {
+   "stable_id": "chair_S1",
+   "blender_name": "chair_S1_seat",
+   "category": "furniture",
+   "semantic_role": "obstacle",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.44,
+    0.44,
+    0.85
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "chair_S1_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "chair_S2": {
+   "stable_id": "chair_S2",
+   "blender_name": "chair_S2_seat",
+   "category": "furniture",
+   "semantic_role": "obstacle",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.44,
+    0.44,
+    0.85
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "chair_S2_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "chair_W": {
+   "stable_id": "chair_W",
+   "blender_name": "chair_W_seat",
+   "category": "furniture",
+   "semantic_role": "obstacle",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.44,
+    0.44,
+    0.85
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "chair_W_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "chair_E": {
+   "stable_id": "chair_E",
+   "blender_name": "chair_E_seat",
+   "category": "furniture",
+   "semantic_role": "obstacle",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.44,
+    0.44,
+    0.85
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "chair_E_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.45
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "stool_0": {
+   "stable_id": "stool_0",
+   "blender_name": "stool_0_seat",
+   "category": "furniture",
+   "semantic_role": "fixture",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.35,
+    0.35,
+    0.65
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "stool_0_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.65
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "stool_1": {
+   "stable_id": "stool_1",
+   "blender_name": "stool_1_seat",
+   "category": "furniture",
+   "semantic_role": "fixture",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.35,
+    0.35,
+    0.65
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "stool_1_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.65
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "stool_2": {
+   "stable_id": "stool_2",
+   "blender_name": "stool_2_seat",
+   "category": "furniture",
+   "semantic_role": "fixture",
+   "collection": "FURNITURE",
+   "dimensions": [
+    0.35,
+    0.35,
+    0.65
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": "stool_2_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.65
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "bowl_cereal": {
+   "stable_id": "bowl_cereal",
+   "blender_name": "bowl_cereal",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.196,
+    0.196,
+    0.008
+   ],
+   "material_class": "ceramic_white",
+   "static": false,
+   "mass_estimate_kg": 0.35,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.12,
+    4.58,
+    0.9
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "spoon": {
+   "stable_id": "spoon",
+   "blender_name": "spoon_handle",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.2,
+    0.03,
+    0.015
+   ],
+   "material_class": "steel_brushed",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.26,
+    4.7,
+    0.904
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    70.0
+   ]
+  },
+  "coaster_a": {
+   "stable_id": "coaster_a",
+   "blender_name": "coaster_a",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.104,
+    0.104,
+    0.007
+   ],
+   "material_class": "oak_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.34,
+    3.78,
+    0.9035
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "mug_coffee": {
+   "stable_id": "mug_coffee",
+   "blender_name": "mug_coffee_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.08,
+    0.08,
+    0.01
+   ],
+   "material_class": "ceramic_putty",
+   "static": false,
+   "mass_estimate_kg": 0.3,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.34,
+    3.78,
+    0.907
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    25.0
+   ]
+  },
+  "cereal_box": {
+   "stable_id": "cereal_box",
+   "blender_name": "cereal_box_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.16,
+    0.07,
+    0.3
+   ],
+   "material_class": "cereal_graphic",
+   "static": false,
+   "mass_estimate_kg": 0.5,
+   "parent": "cereal_box_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.138
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "dish_towel": {
+   "stable_id": "dish_towel",
+   "blender_name": "dish_towel",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.2,
+    0.15,
+    0.025
+   ],
+   "material_class": "linen_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.62,
+    5.38,
+    0.9125
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fruit_bowl": {
+   "stable_id": "fruit_bowl",
+   "blender_name": "fruit_bowl",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.28,
+    0.28,
+    0.01
+   ],
+   "material_class": "ceramic_putty",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.48,
+    5.1,
+    0.9
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "apple_1": {
+   "stable_id": "apple_1",
+   "blender_name": "apple_1",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.074,
+    0.074,
+    0.06808
+   ],
+   "material_class": "apple_skin",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.44,
+    5.08,
+    0.9518
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "apple_2": {
+   "stable_id": "apple_2",
+   "blender_name": "apple_2",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.074,
+    0.074,
+    0.06808
+   ],
+   "material_class": "apple_skin",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.52,
+    5.12,
+    0.951
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "apple_3": {
+   "stable_id": "apple_3",
+   "blender_name": "apple_3",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.074,
+    0.074,
+    0.06808
+   ],
+   "material_class": "apple_skin",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.47,
+    5.15,
+    0.9506
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "orange_1": {
+   "stable_id": "orange_1",
+   "blender_name": "orange_1",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.068,
+    0.068,
+    0.068
+   ],
+   "material_class": "orange_skin",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.53,
+    5.05,
+    1.005
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "orange_2": {
+   "stable_id": "orange_2",
+   "blender_name": "orange_2",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.068,
+    0.068,
+    0.068
+   ],
+   "material_class": "orange_skin",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.44,
+    5.14,
+    1.005
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "banana": {
+   "stable_id": "banana",
+   "blender_name": "banana",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.2,
+    0.18,
+    0.05
+   ],
+   "material_class": "banana_skin",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "cutting_board": {
+   "stable_id": "cutting_board",
+   "blender_name": "cutting_board",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.014,
+    0.34,
+    0.26
+   ],
+   "material_class": "oak",
+   "static": false,
+   "mass_estimate_kg": 1.2,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.09,
+    4.42,
+    1.03
+   ],
+   "rotation_deg": [
+    0.0,
+    -9.0,
+    0.0
+   ]
+  },
+  "butter_knife": {
+   "stable_id": "butter_knife",
+   "blender_name": "butter_knife",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.19,
+    0.022,
+    0.006
+   ],
+   "material_class": "steel_brushed",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3,
+    4.62,
+    0.904
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    -24.0
+   ]
+  },
+  "bottle_recycling": {
+   "stable_id": "bottle_recycling",
+   "blender_name": "bottle_recycling",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.07,
+    0.07,
+    0.237
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": 0.04,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.2,
+    3.42,
+    0.9
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "can_recycling": {
+   "stable_id": "can_recycling",
+   "blender_name": "can_recycling",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.066,
+    0.066,
+    0.115
+   ],
+   "material_class": "steel_brushed",
+   "static": false,
+   "mass_estimate_kg": 0.015,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    2.66,
+    4.62,
+    0.9575
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "sponge": {
+   "stable_id": "sponge",
+   "blender_name": "sponge",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.09,
+    0.06,
+    0.028
+   ],
+   "material_class": "linen_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.3,
+    2.58,
+    0.914
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "soap_dispenser": {
+   "stable_id": "soap_dispenser",
+   "blender_name": "soap_dispenser",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.084,
+    0.084,
+    0.162
+   ],
+   "material_class": "ceramic_white",
+   "static": false,
+   "mass_estimate_kg": 0.4,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.16,
+    2.55,
+    0.9
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "plate_drying_1": {
+   "stable_id": "plate_drying_1",
+   "blender_name": "plate_drying_1",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.236,
+    0.236,
+    0.018000000000000002
+   ],
+   "material_class": "ceramic_white",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.28,
+    4.02,
+    0.972
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "glass_drying": {
+   "stable_id": "glass_drying",
+   "blender_name": "glass_drying",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.068,
+    0.068,
+    0.012
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.47,
+    4.04,
+    0.952
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_1": {
+   "stable_id": "jar_1",
+   "blender_name": "jar_1",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.09241965188566223,
+    0.09241965188566223,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    8.47,
+    1.15,
+    0.564
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_2": {
+   "stable_id": "jar_2",
+   "blender_name": "jar_2",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.08588334345335612,
+    0.08588334345335612,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.62,
+    1.15,
+    0.564
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_3": {
+   "stable_id": "jar_3",
+   "blender_name": "jar_3",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.08550797204414239,
+    0.08550797204414239,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    8.47,
+    1.43,
+    0.564
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_4": {
+   "stable_id": "jar_4",
+   "blender_name": "jar_4",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.09527478777522204,
+    0.09527478777522204,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.62,
+    1.43,
+    0.564
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_5": {
+   "stable_id": "jar_5",
+   "blender_name": "jar_5",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.09503749891770537,
+    0.09503749891770537,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    8.47,
+    1.71,
+    0.564
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_6": {
+   "stable_id": "jar_6",
+   "blender_name": "jar_6",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.08980421307978238,
+    0.08980421307978238,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.62,
+    1.71,
+    0.564
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_7": {
+   "stable_id": "jar_7",
+   "blender_name": "jar_7",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.09900467666405496,
+    0.09900467666405496,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    8.47,
+    1.15,
+    1.114
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "jar_8": {
+   "stable_id": "jar_8",
+   "blender_name": "jar_8",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.08521114969606167,
+    0.08521114969606167,
+    0.01
+   ],
+   "material_class": "glass_low_iron",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.62,
+    1.15,
+    1.114
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_box_1": {
+   "stable_id": "pantry_box_1",
+   "blender_name": "pantry_box_1_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.16,
+    0.07,
+    0.3
+   ],
+   "material_class": "cereal_graphic",
+   "static": false,
+   "mass_estimate_kg": 0.5,
+   "parent": "pantry_box_1_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.138
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_box_2": {
+   "stable_id": "pantry_box_2",
+   "blender_name": "pantry_box_2_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.16,
+    0.07,
+    0.3
+   ],
+   "material_class": "cereal_graphic",
+   "static": false,
+   "mass_estimate_kg": 0.5,
+   "parent": "pantry_box_2_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.138
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_box_3": {
+   "stable_id": "pantry_box_3",
+   "blender_name": "pantry_box_3_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.16,
+    0.07,
+    0.3
+   ],
+   "material_class": "cereal_graphic",
+   "static": false,
+   "mass_estimate_kg": 0.5,
+   "parent": "pantry_box_3_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.138
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pantry_box_4": {
+   "stable_id": "pantry_box_4",
+   "blender_name": "pantry_box_4_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.16,
+    0.07,
+    0.3
+   ],
+   "material_class": "cereal_graphic",
+   "static": false,
+   "mass_estimate_kg": 0.5,
+   "parent": "pantry_box_4_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.138
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "cereal_box_pantry": {
+   "stable_id": "cereal_box_pantry",
+   "blender_name": "cereal_box_pantry_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.16,
+    0.07,
+    0.3
+   ],
+   "material_class": "cereal_graphic",
+   "static": false,
+   "mass_estimate_kg": 0.5,
+   "parent": "cereal_box_pantry_root",
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    0.0,
+    0.0,
+    0.138
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "console_table": {
+   "stable_id": "console_table",
+   "blender_name": "console_top",
+   "category": "furniture",
+   "semantic_role": "fixture",
+   "collection": "PROPS",
+   "dimensions": [
+    0.29999999999999893,
+    0.6,
+    0.03
+   ],
+   "material_class": "oak",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.61,
+    2.9,
+    0.8
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "key_tray": {
+   "stable_id": "key_tray",
+   "blender_name": "key_tray",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.23,
+    0.23,
+    0.006
+   ],
+   "material_class": "steel_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.58,
+    3.06,
+    0.815
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "keys": {
+   "stable_id": "keys",
+   "blender_name": "keys_fob",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.035,
+    0.012,
+    0.006
+   ],
+   "material_class": "rubber_black",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.58,
+    3.06,
+    0.85
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    40.107
+   ]
+  },
+  "notebook": {
+   "stable_id": "notebook",
+   "blender_name": "notebook",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.22,
+    0.16,
+    0.022
+   ],
+   "material_class": "linen_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.6,
+    2.76,
+    0.826
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    82.0
+   ]
+  },
+  "phone": {
+   "stable_id": "phone",
+   "blender_name": "phone",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.142,
+    0.068,
+    0.008
+   ],
+   "material_class": "steel_dark",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    9.6,
+    3.2,
+    0.819
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    68.0
+   ]
+  },
+  "plant_olive": {
+   "stable_id": "plant_olive",
+   "blender_name": "olive_pot",
+   "category": "props",
+   "semantic_role": "visual_only",
+   "collection": "PROPS",
+   "dimensions": [
+    0.42,
+    0.42,
+    0.06
+   ],
+   "material_class": "ceramic_putty",
+   "static": true,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    4.35,
+    6.95,
+    0.0
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "plate_table": {
+   "stable_id": "plate_table",
+   "blender_name": "plate_table",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.236,
+    0.236,
+    0.018000000000000002
+   ],
+   "material_class": "ceramic_white",
+   "static": false,
+   "mass_estimate_kg": null,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    6.38,
+    5.28,
+    0.755
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "mug_table": {
+   "stable_id": "mug_table",
+   "blender_name": "mug_table_body",
+   "category": "props",
+   "semantic_role": "grasp_target",
+   "collection": "PROPS",
+   "dimensions": [
+    0.08,
+    0.08,
+    0.01
+   ],
+   "material_class": "ceramic_putty",
+   "static": false,
+   "mass_estimate_kg": 0.3,
+   "parent": null,
+   "support": null,
+   "collision": "box_aabb",
+   "location": [
+    6.62,
+    5.24,
+    0.756
+   ],
+   "rotation_deg": [
+    0.0,
+    0.0,
+    -40.0
+   ]
+  }
+ },
+ "joints": {
+  "waste_pullout": {
+   "id": "waste_pullout",
+   "elem": "Waste/recycling pull-out",
+   "type": "prismatic",
+   "axis": "+X",
+   "limits": [
+    0,
+    0.55
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.55
+   },
+   "blender_object": "waste_pullout_root",
+   "pivot_world": [
+    0.659500002861023,
+    2.0999999046325684,
+    0.4860000014305115
+   ],
+   "axis_local": [
+    1,
+    0,
+    0
+   ],
+   "handle_grasp_region": "bar handle center of door",
+   "swept_volume_clearance": "slides 0.55 m +X out of cabinet",
+   "allowed_contacts": [
+    "runner carriage vs carcass rails (intended)"
+   ],
+   "task_critical_collision": [
+    "waste_pullout_door",
+    "bin_paper",
+    "bin_plastic"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "dishwasher_door": {
+   "id": "dishwasher_door",
+   "elem": "Dishwasher drop-down door",
+   "type": "revolute",
+   "axis": "-Y_local_drop",
+   "limits": [
+    0,
+    0
+   ],
+   "states": {
+    "closed": 0,
+    "half": -45,
+    "open": -90
+   },
+   "blender_object": "dishwasher_door",
+   "pivot_world": [
+    0.66,
+    3.6500000000000004,
+    0.864
+   ],
+   "axis_local": [
+    0,
+    1,
+    0
+   ],
+   "handle_grasp_region": "recessed top-edge handle channel along width",
+   "swept_volume_clearance": "open reach 0.58 m toward +X at hinge height",
+   "allowed_contacts": [
+    "door inner face vs body lip (intended, open)"
+   ],
+   "task_critical_collision": [
+    "dishwasher_door"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "lower_door_a": {
+   "id": "lower_door_a",
+   "elem": "Prep base door A",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    -90,
+    0
+   ],
+   "states": {
+    "closed": 0,
+    "open": -88
+   },
+   "blender_object": "wr_prep_door_a",
+   "pivot_world": [
+    0.6595,
+    3.9530000000000003,
+    0.276
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~0.28",
+   "swept_volume_clearance": "sweeps radius 0.49 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "lower_door_a"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "lower_door_b": {
+   "id": "lower_door_b",
+   "elem": "Prep base door B",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    0,
+    90
+   ],
+   "states": {
+    "closed": 0,
+    "open": 88
+   },
+   "blender_object": "wr_prep_door_b",
+   "pivot_world": [
+    0.6595,
+    4.947,
+    0.4885
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~0.49",
+   "swept_volume_clearance": "sweeps radius 0.49 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "lower_door_b"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "drawer_prep_1": {
+   "id": "drawer_prep_1",
+   "elem": "Prep drawer 1 (top)",
+   "type": "prismatic",
+   "axis": "+X",
+   "limits": [
+    0,
+    0.45
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.45
+   },
+   "blender_object": "drawer_prep_1_root",
+   "pivot_world": [
+    0.659500002861023,
+    4.199999809265137,
+    0.7960000038146973
+   ],
+   "axis_local": [
+    1,
+    0,
+    0
+   ],
+   "handle_grasp_region": "bar handle front center",
+   "swept_volume_clearance": "slides 0.45 m +X",
+   "allowed_contacts": [
+    "drawer box vs carcass walls (runner clearance)"
+   ],
+   "task_critical_collision": [
+    "drawer_prep_1_front"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "drawer_prep_2": {
+   "id": "drawer_prep_2",
+   "elem": "Prep drawer 2 (mid)",
+   "type": "prismatic",
+   "axis": "+X",
+   "limits": [
+    0,
+    0.45
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.45
+   },
+   "blender_object": "drawer_prep_2_root",
+   "pivot_world": [
+    0.659500002861023,
+    4.199999809265137,
+    0.5849999785423279
+   ],
+   "axis_local": [
+    1,
+    0,
+    0
+   ],
+   "handle_grasp_region": "bar handle front center",
+   "swept_volume_clearance": "slides 0.45 m +X",
+   "allowed_contacts": [
+    "drawer box vs carcass walls (runner clearance)"
+   ],
+   "task_critical_collision": [
+    "drawer_prep_2_front"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "oven_door": {
+   "id": "oven_door",
+   "elem": "Oven drop-down door",
+   "type": "revolute",
+   "axis": "-Y_local_drop",
+   "limits": [
+    0,
+    0
+   ],
+   "states": {
+    "closed": 0,
+    "half": -45,
+    "open": -90
+   },
+   "blender_object": "oven_door",
+   "pivot_world": [
+    0.66,
+    6.73,
+    1.49
+   ],
+   "axis_local": [
+    0,
+    1,
+    0
+   ],
+   "handle_grasp_region": "recessed top-edge handle channel along width",
+   "swept_volume_clearance": "open reach 0.47 m toward +X at hinge height",
+   "allowed_contacts": [
+    "door inner face vs body lip (intended, open)"
+   ],
+   "task_critical_collision": [
+    "oven_door"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "ovencol_top_door": {
+   "id": "ovencol_top_door",
+   "elem": "Oven column top cabinet door",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    0,
+    70
+   ],
+   "states": {
+    "closed": 0,
+    "open": 68
+   },
+   "blender_object": "wr_ovencol_top_door",
+   "pivot_world": [
+    0.6595,
+    7.397,
+    2.145
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~2.15",
+   "swept_volume_clearance": "sweeps radius 0.60 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "ovencol_top_door"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "upper_door_a": {
+   "id": "upper_door_a",
+   "elem": "Prep upper door A",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    -80,
+    0
+   ],
+   "states": {
+    "closed": 0,
+    "open": -78
+   },
+   "blender_object": "up_door_a",
+   "pivot_world": [
+    0.3595,
+    3.953,
+    1.8499999999999999
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~1.85",
+   "swept_volume_clearance": "sweeps radius 0.49 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "upper_door_a"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "upper_door_b": {
+   "id": "upper_door_b",
+   "elem": "Prep upper door B",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    0,
+    80
+   ],
+   "states": {
+    "closed": 0,
+    "open": 78
+   },
+   "blender_object": "up_door_b",
+   "pivot_world": [
+    0.3595,
+    4.947,
+    1.8499999999999999
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~1.85",
+   "swept_volume_clearance": "sweeps radius 0.49 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "upper_door_b"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "fridge_door": {
+   "id": "fridge_door",
+   "elem": "Refrigerator main door",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    0,
+    95
+   ],
+   "states": {
+    "closed": 0,
+    "half": 45,
+    "open": 92
+   },
+   "handle_side": "east",
+   "grasp": "vertical bar handle, east edge",
+   "blender_object": "fridge_door",
+   "pivot_world": [
+    0.19,
+    0.662,
+    1.6800000000000002
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~1.68",
+   "swept_volume_clearance": "sweeps radius 1.05 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "fridge_door"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "freezer_drawer": {
+   "id": "freezer_drawer",
+   "elem": "Freezer drawer",
+   "type": "prismatic",
+   "axis": "+Y",
+   "limits": [
+    0,
+    0.52
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.52
+   },
+   "blender_object": "freezer_drawer_root",
+   "pivot_world": [
+    0.675000011920929,
+    0.659500002861023,
+    0.6949999928474426
+   ],
+   "axis_local": [
+    0,
+    1,
+    0
+   ],
+   "handle_grasp_region": "horizontal bar handle",
+   "swept_volume_clearance": "slides 0.52 m +Y",
+   "allowed_contacts": [
+    "drawer box vs enclosure walls (runner clearance)"
+   ],
+   "task_critical_collision": [
+    "freezer_drawer_front"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "tall_door_a": {
+   "id": "tall_door_a",
+   "elem": "South tall cabinet door A",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    0,
+    92
+   ],
+   "states": {
+    "closed": 0,
+    "open": 90
+   },
+   "blender_object": "tall_door_a",
+   "pivot_world": [
+    1.353,
+    0.6595,
+    1.2765
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~1.28",
+   "swept_volume_clearance": "sweeps radius 0.44 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "tall_door_a"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "tall_door_b": {
+   "id": "tall_door_b",
+   "elem": "South tall cabinet door B",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    -92,
+    0
+   ],
+   "states": {
+    "closed": 0,
+    "open": -90
+   },
+   "blender_object": "tall_door_b",
+   "pivot_world": [
+    2.247,
+    0.6595,
+    1.2765
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~1.28",
+   "swept_volume_clearance": "sweeps radius 0.44 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "tall_door_b"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "island_door": {
+   "id": "island_door",
+   "elem": "Island hinged door",
+   "type": "revolute",
+   "axis": "Z",
+   "limits": [
+    -100,
+    0
+   ],
+   "states": {
+    "closed": 0,
+    "open": -95
+   },
+   "blender_object": "island_door",
+   "pivot_world": [
+    1.7405,
+    4.763,
+    0.268
+   ],
+   "axis_local": [
+    0,
+    0,
+    1
+   ],
+   "handle_grasp_region": "bar handle near free edge, z~0.27",
+   "swept_volume_clearance": "sweeps radius 0.78 m about hinge",
+   "allowed_contacts": [
+    "door edge vs carcass front 3mm gap (closed)"
+   ],
+   "task_critical_collision": [
+    "island_door"
+   ],
+   "default_state": 0,
+   "joint_order": "revolute"
+  },
+  "drawer_island_1": {
+   "id": "drawer_island_1",
+   "elem": "Island drawer 1",
+   "type": "prismatic",
+   "axis": "-X",
+   "limits": [
+    0,
+    0.45
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.45
+   },
+   "blender_object": "drawer_island_1_root",
+   "pivot_world": [
+    1.7404999732971191,
+    3.609999895095825,
+    0.7860000133514404
+   ],
+   "axis_local": [
+    -1,
+    0,
+    0
+   ],
+   "handle_grasp_region": "bar handle front center",
+   "swept_volume_clearance": "slides 0.45 m -X into aisle",
+   "allowed_contacts": [
+    "drawer box vs carcass walls (runner clearance)"
+   ],
+   "task_critical_collision": [
+    "drawer_island_1_front"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "drawer_island_2": {
+   "id": "drawer_island_2",
+   "elem": "Island drawer 2",
+   "type": "prismatic",
+   "axis": "-X",
+   "limits": [
+    0,
+    0.45
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.45
+   },
+   "blender_object": "drawer_island_2_root",
+   "pivot_world": [
+    1.7404999732971191,
+    4.369999885559082,
+    0.5709999799728394
+   ],
+   "axis_local": [
+    -1,
+    0,
+    0
+   ],
+   "handle_grasp_region": "bar handle front center",
+   "swept_volume_clearance": "slides 0.45 m -X into aisle",
+   "allowed_contacts": [
+    "drawer box vs carcass walls (runner clearance)"
+   ],
+   "task_critical_collision": [
+    "drawer_island_2_front"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "pantry_drawer": {
+   "id": "pantry_drawer",
+   "elem": "Pantry lower drawer",
+   "type": "prismatic",
+   "axis": "+Y",
+   "limits": [
+    0,
+    0.4
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.4
+   },
+   "blender_object": "pantry_drawer_root",
+   "pivot_world": [
+    9.0600004196167,
+    0.7494999766349792,
+    0.7400000095367432
+   ],
+   "axis_local": [
+    0,
+    1,
+    0
+   ],
+   "handle_grasp_region": "bar handle front",
+   "swept_volume_clearance": "slides 0.40 m +Y",
+   "allowed_contacts": [
+    "drawer box vs carcass (runner clearance)"
+   ],
+   "task_critical_collision": [
+    "pantry_drawer_front"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  },
+  "pantry_slide": {
+   "id": "pantry_slide",
+   "elem": "Pantry sliding panel",
+   "type": "prismatic",
+   "axis": "-X",
+   "limits": [
+    0,
+    0.95
+   ],
+   "states": {
+    "closed": 0,
+    "open": 0.95
+   },
+   "blender_object": "pantry_slide_panel",
+   "pivot_world": [
+    8.850000381469727,
+    2.4600000381469727,
+    1.149999976158142
+   ],
+   "axis_local": [
+    -1,
+    0,
+    0
+   ],
+   "handle_grasp_region": "vertical bar handle east edge",
+   "swept_volume_clearance": "slides 0.95 m -X along track",
+   "allowed_contacts": [
+    "rollers vs track channel (intended)"
+   ],
+   "task_critical_collision": [
+    "pantry_slide_panel"
+   ],
+   "default_state": 0,
+   "joint_order": "prismatic"
+  }
+ },
+ "lights": {
+  "LIGHTING_GENERAL": {
+   "desc": "general + task: downlights, under-cabinet, island pendants",
+   "default": 1.0,
+   "lights": [
+    "downlight_0",
+    "downlight_1",
+    "downlight_2",
+    "downlight_3",
+    "downlight_4",
+    "downlight_5",
+    "downlight_6",
+    "downlight_7",
+    "uc_light_a",
+    "uc_light_b",
+    "pendant_island_0_light",
+    "pendant_island_1_light",
+    "pantry_light_src"
+   ]
+  },
+  "LIGHTING_DINING": {
+   "desc": "dining pendants",
+   "default": 0.0,
+   "lights": [
+    "pendant_dining_0_light",
+    "pendant_dining_1_light"
+   ]
+  }
+ },
+ "cameras": {
+  "JUDGE_01_hero_entry": {
+   "name": "JUDGE_01_hero_entry",
+   "location": [
+    9.3,
+    3.35,
+    1.55
+   ],
+   "target": [
+    2.1,
+    5.1,
+    1.0
+   ],
+   "lens_mm": 24,
+   "purpose": "complete spatial hero view from entry",
+   "blender_name": "JUDGE_01_hero_entry"
+  },
+  "JUDGE_02_island_workflow": {
+   "name": "JUDGE_02_island_workflow",
+   "location": [
+    4.35,
+    1.95,
+    1.5
+   ],
+   "target": [
+    0.7,
+    4.9,
+    0.95
+   ],
+   "lens_mm": 28,
+   "purpose": "island + preparation wall + working clearances",
+   "blender_name": "JUDGE_02_island_workflow"
+  },
+  "JUDGE_03_sink_dishwasher": {
+   "name": "JUDGE_03_sink_dishwasher",
+   "location": [
+    2.75,
+    2.05,
+    1.5
+   ],
+   "target": [
+    0.2,
+    3.4,
+    0.9
+   ],
+   "lens_mm": 28,
+   "purpose": "sink, dishwasher, waste system, service logic",
+   "blender_name": "JUDGE_03_sink_dishwasher"
+  },
+  "JUDGE_04_cooking_oven": {
+   "name": "JUDGE_04_cooking_oven",
+   "location": [
+    3.35,
+    3.05,
+    1.55
+   ],
+   "target": [
+    0.35,
+    6.35,
+    1.0
+   ],
+   "lens_mm": 28,
+   "purpose": "cooktop, extraction, oven column, safe clearances",
+   "blender_name": "JUDGE_04_cooking_oven"
+  },
+  "JUDGE_05_fridge_tall": {
+   "name": "JUDGE_05_fridge_tall",
+   "location": [
+    3.6,
+    2.75,
+    1.5
+   ],
+   "target": [
+    0.6,
+    0.35,
+    1.15
+   ],
+   "lens_mm": 28,
+   "purpose": "refrigerator enclosure and tall cabinetry",
+   "blender_name": "JUDGE_05_fridge_tall"
+  },
+  "JUDGE_06_pantry_interior": {
+   "name": "JUDGE_06_pantry_interior",
+   "location": [
+    8.5,
+    2.15,
+    1.5
+   ],
+   "target": [
+    9.35,
+    0.75,
+    1.1
+   ],
+   "lens_mm": 20,
+   "purpose": "pantry depth, shelving, drawers, sliding entry",
+   "blender_name": "JUDGE_06_pantry_interior"
+  },
+  "JUDGE_07_breakfast_dining": {
+   "name": "JUDGE_07_breakfast_dining",
+   "location": [
+    3.7,
+    3.3,
+    1.5
+   ],
+   "target": [
+    6.3,
+    6.15,
+    0.8
+   ],
+   "lens_mm": 32,
+   "purpose": "dining furniture, daylight, lived-in story",
+   "blender_name": "JUDGE_07_breakfast_dining"
+  },
+  "JUDGE_08_robot_nav": {
+   "name": "JUDGE_08_robot_nav",
+   "location": [
+    9.0,
+    3.85,
+    0.75
+   ],
+   "target": [
+    1.4,
+    4.5,
+    0.85
+   ],
+   "lens_mm": 24,
+   "purpose": "robot-height 0.75 m route width + obstacle complexity",
+   "blender_name": "JUDGE_08_robot_nav"
+  },
+  "JUDGE_09_hinged_open": {
+   "name": "JUDGE_09_hinged_open",
+   "location": [
+    2.75,
+    3.1,
+    1.6
+   ],
+   "target": [
+    0.55,
+    0.6,
+    1.0
+   ],
+   "lens_mm": 28,
+   "purpose": "open door states with pivots and interiors visible",
+   "blender_name": "JUDGE_09_hinged_open"
+  },
+  "JUDGE_10_drawers_pullouts": {
+   "name": "JUDGE_10_drawers_pullouts",
+   "location": [
+    2.6,
+    3.6,
+    1.4
+   ],
+   "target": [
+    0.55,
+    2.0,
+    0.55
+   ],
+   "lens_mm": 28,
+   "purpose": "drawer boxes, waste pull-out, internals",
+   "blender_name": "JUDGE_10_drawers_pullouts"
+  },
+  "JUDGE_11_material_detail": {
+   "name": "JUDGE_11_material_detail",
+   "location": [
+    1.45,
+    4.45,
+    1.12
+   ],
+   "target": [
+    0.55,
+    4.15,
+    0.9
+   ],
+   "lens_mm": 50,
+   "purpose": "cabinet gaps, worktop edge, seals, grain, contact",
+   "blender_name": "JUDGE_11_material_detail"
+  },
+  "JUDGE_12_reverse_audit": {
+   "name": "JUDGE_12_reverse_audit",
+   "location": [
+    0.55,
+    0.75,
+    2.4
+   ],
+   "target": [
+    7.6,
+    6.3,
+    1.15
+   ],
+   "lens_mm": 20,
+   "purpose": "high reverse angle: backs, ceiling, entry, terrace",
+   "blender_name": "JUDGE_12_reverse_audit"
+  }
+ },
+ "collision_proxies": {
+  "PROXY_dishwasher_door": "dishwasher_door",
+  "PROXY_lower_door_a": "lower_door_a",
+  "PROXY_lower_door_b": "lower_door_b",
+  "PROXY_oven_door": "oven_door",
+  "PROXY_ovencol_top_door": "ovencol_top_door",
+  "PROXY_upper_door_a": "upper_door_a",
+  "PROXY_upper_door_b": "upper_door_b",
+  "PROXY_fridge_door": "fridge_door",
+  "PROXY_tall_door_a": "tall_door_a",
+  "PROXY_tall_door_b": "tall_door_b",
+  "PROXY_island_door": "island_door",
+  "PROXY_bin_paper": "bin_paper",
+  "PROXY_bin_plastic": "bin_plastic",
+  "PROXY_sink_bowl": "sink_bowl",
+  "PROXY_island_worktop": "island_worktop",
+  "PROXY_sideboard": "sideboard",
+  "PROXY_milk_carton": "milk_carton",
+  "PROXY_fridge_bottle_0": "fridge_bottle_0",
+  "PROXY_fridge_bottle_1": "fridge_bottle_1",
+  "PROXY_dining_table": "dining_table",
+  "PROXY_chair_N1": "chair_N1",
+  "PROXY_chair_N2": "chair_N2",
+  "PROXY_chair_S1": "chair_S1",
+  "PROXY_chair_S2": "chair_S2",
+  "PROXY_chair_W": "chair_W",
+  "PROXY_chair_E": "chair_E",
+  "PROXY_bowl_cereal": "bowl_cereal",
+  "PROXY_coaster_a": "coaster_a",
+  "PROXY_mug_coffee": "mug_coffee",
+  "PROXY_cereal_box": "cereal_box",
+  "PROXY_dish_towel": "dish_towel",
+  "PROXY_fruit_bowl": "fruit_bowl",
+  "PROXY_apple_1": "apple_1",
+  "PROXY_apple_2": "apple_2",
+  "PROXY_apple_3": "apple_3",
+  "PROXY_orange_1": "orange_1",
+  "PROXY_orange_2": "orange_2",
+  "PROXY_cutting_board": "cutting_board",
+  "PROXY_butter_knife": "butter_knife",
+  "PROXY_bottle_recycling": "bottle_recycling",
+  "PROXY_can_recycling": "can_recycling",
+  "PROXY_sponge": "sponge",
+  "PROXY_soap_dispenser": "soap_dispenser",
+  "PROXY_plate_drying_1": "plate_drying_1",
+  "PROXY_glass_drying": "glass_drying",
+  "PROXY_jar_1": "jar_1",
+  "PROXY_jar_2": "jar_2",
+  "PROXY_jar_3": "jar_3",
+  "PROXY_jar_4": "jar_4",
+  "PROXY_jar_5": "jar_5",
+  "PROXY_jar_6": "jar_6",
+  "PROXY_jar_7": "jar_7",
+  "PROXY_jar_8": "jar_8",
+  "PROXY_pantry_box_1": "pantry_box_1",
+  "PROXY_pantry_box_2": "pantry_box_2",
+  "PROXY_pantry_box_3": "pantry_box_3",
+  "PROXY_pantry_box_4": "pantry_box_4",
+  "PROXY_cereal_box_pantry": "cereal_box_pantry",
+  "PROXY_console_table": "console_table",
+  "PROXY_key_tray": "key_tray",
+  "PROXY_keys": "keys",
+  "PROXY_notebook": "notebook",
+  "PROXY_phone": "phone",
+  "PROXY_plate_table": "plate_table",
+  "PROXY_mug_table": "mug_table"
+ },
+ "spawn_regions": {
+  "island_worktop": {
+   "box_min": [
+    1.9,
+    3.4,
+    0.9
+   ],
+   "box_max": [
+    2.7,
+    5.4,
+    0.96
+   ],
+   "note": "primary task-object spawn region"
+  },
+  "dining_table_top": {
+   "box_min": [
+    5.0,
+    5.2,
+    0.75
+   ],
+   "box_max": [
+    6.8,
+    6.0,
+    0.81
+   ]
+  },
+  "pantry_shelf_L2": {
+   "box_min": [
+    8.36,
+    1.05,
+    1.11
+   ],
+   "box_max": [
+    9.6,
+    1.97,
+    1.35
+   ]
+  },
+  "fridge_shelf_2": {
+   "box_min": [
+    0.3,
+    0.1,
+    1.35
+   ],
+   "box_max": [
+    1.2,
+    0.5,
+    1.5
+   ]
+  },
+  "dishwasher_upper_rack": {
+   "box_min": [
+    0.1,
+    3.4,
+    0.55
+   ],
+   "box_max": [
+    0.45,
+    3.9,
+    0.75
+   ]
+  }
+ },
+ "tasks": [
+  {
+   "id": "place_mug_in_dishwasher",
+   "instruction": "Pick up the coffee mug from the island worktop and place it upright in the dishwasher upper rack.",
+   "objects": [
+    "mug_coffee",
+    "dishwasher_door",
+    "dishwasher_rack"
+   ],
+   "init": "mug on island worktop near west edge; dishwasher door closed",
+   "precondition": "dishwasher_door.state == 'open'",
+   "target": "dishwasher upper rack region (x 0.10-0.45, y 3.40-3.90, z 0.55-0.75)",
+   "success": "mug supported inside rack region, upright, door may close",
+   "fail": "mug penetrates rack/door/floor or rests on floor",
+   "approach": "from island west aisle, face +X toward dishwasher front",
+   "interact_point": [
+    0.6,
+    3.65,
+    0.9
+   ],
+   "rand": {
+    "mug_xy": [
+     0.1,
+     0.35
+    ],
+    "mug_yaw": [
+     -30,
+     30
+    ]
+   }
+  },
+  {
+   "id": "retrieve_cereal_from_pantry",
+   "instruction": "Fetch the cereal box from the pantry shelf and bring it to the island.",
+   "objects": [
+    "cereal_box_pantry",
+    "pantry_slide",
+    "cereal_box"
+   ],
+   "init": "backup cereal box on pantry shelf level 2; decoy box already on island",
+   "precondition": "pantry_slide.state == 'open'",
+   "target": "island worktop region near east stools",
+   "success": "pantry cereal box supported on island worktop region",
+   "fail": "box left pantry region but never reaches island; box dropped",
+   "approach": "through pantry doorway, frontal shelf approach, reach height 1.10 m",
+   "interact_point": [
+    8.85,
+    1.1,
+    1.1
+   ],
+   "rand": {
+    "yaw": [
+     -20,
+     20
+    ]
+   }
+  },
+  {
+   "id": "move_fruit_to_dining_table",
+   "instruction": "Move one piece of fruit from the fruit bowl to the dining table.",
+   "objects": [
+    "apple_1",
+    "apple_2",
+    "orange_1",
+    "fruit_bowl",
+    "dining_table"
+   ],
+   "init": "fruit in bowl on island worktop",
+   "precondition": "none",
+   "target": "dining table top region",
+   "success": "at least one fruit supported on table top",
+   "fail": "fruit on floor or penetrating tableware",
+   "approach": "island east side, then dining table south edge",
+   "interact_point": [
+    2.85,
+    4.4,
+    0.9
+   ],
+   "rand": {
+    "which_fruit": "any of apples/oranges"
+   }
+  },
+  {
+   "id": "put_recycling_in_pullout_bin",
+   "instruction": "Put the plastic bottle and the tin can into the recycling pull-out bins.",
+   "objects": [
+    "bottle_recycling",
+    "can_recycling",
+    "waste_pullout"
+   ],
+   "init": "bottle and can on island worktop; pull-out closed",
+   "precondition": "waste_pullout.state == 'open'",
+   "target": "pull-out bin volumes (plastic lane / metal lane)",
+   "success": "both items inside their bin volumes, supported",
+   "fail": "item on floor, item in wrong lane when task requires sorting",
+   "approach": "island west, then waste pull-out front (face -X)",
+   "interact_point": [
+    1.1,
+    2.1,
+    0.6
+   ],
+   "rand": {
+    "n_items": [
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "id": "open_refrigerator_and_retrieve_item",
+   "instruction": "Open the refrigerator and take out the milk carton.",
+   "objects": [
+    "fridge_door",
+    "milk_carton"
+   ],
+   "init": "fridge door closed; milk on fridge shelf 2",
+   "precondition": "none",
+   "target": "front clear zone outside fridge",
+   "success": "fridge door >= half-open AND milk carton retrieved to front zone",
+   "fail": "door forced beyond limit; carton dropped",
+   "approach": "frontal, hinge west so swing moves away from approach line",
+   "interact_point": [
+    0.7,
+    1.55,
+    1.55
+   ],
+   "rand": {
+    "door_state": [
+     "half",
+     "open"
+    ]
+   }
+  },
+  {
+   "id": "place_bowl_in_upper_cabinet",
+   "instruction": "Put the cereal bowl into the prep upper cabinet B.",
+   "objects": [
+    "bowl_cereal",
+    "upper_door_b"
+   ],
+   "init": "bowl on island worktop; upper_door_b closed",
+   "precondition": "upper_door_b.state == 'open'",
+   "target": "upper cabinet B shelf region (z 1.50-1.70)",
+   "success": "bowl supported on cabinet shelf inside cavity",
+   "fail": "bowl penetrates shelf/door; door closed onto bowl",
+   "approach": "island west aisle, reach up to 1.65 m",
+   "interact_point": [
+    0.45,
+    4.7,
+    1.6
+   ],
+   "rand": {
+    "yaw": [
+     -25,
+     25
+    ]
+   }
+  },
+  {
+   "id": "close_all_open_storage",
+   "instruction": "Close every open door, drawer and pull-out in the kitchen.",
+   "objects": [
+    "fridge_door",
+    "dishwasher_door",
+    "upper_door_a",
+    "drawer_prep_1",
+    "waste_pullout",
+    "pantry_slide"
+   ],
+   "init": "reset sets fridge door open, dishwasher open, one upper open, one drawer open, pull-out open, pantry open",
+   "precondition": "none",
+   "target": "all joints at named state 'closed'",
+   "success": "every joint within 0.5 deg / 5 mm of closed",
+   "fail": "any joint left open",
+   "approach": "per-fixture approach points",
+   "interact_point": null,
+   "rand": {
+    "open_set": "deterministic fixed set"
+   }
+  },
+  {
+   "id": "switch_from_task_lighting_to_dining_lighting",
+   "instruction": "Switch off the task lighting group and switch on the dining pendants.",
+   "objects": [
+    "LIGHTING_GENERAL",
+    "LIGHTING_DINING"
+   ],
+   "init": "GENERAL on, DINING off",
+   "precondition": "none",
+   "target": "light group states",
+   "success": "GENERAL off AND DINING on",
+   "fail": "both on or both off",
+   "approach": "switch actuation at wall keypad (2.95, 0.10, 1.10) or API",
+   "interact_point": [
+    2.95,
+    0.1,
+    1.1
+   ],
+   "rand": {}
+  }
+ ],
+ "robot": {
+  "radius": 0.35,
+  "route": [
+   [
+    9.3,
+    3.85
+   ],
+   [
+    7.6,
+    3.85
+   ],
+   [
+    4.55,
+    3.85
+   ],
+   [
+    4.2,
+    3.3
+   ],
+   [
+    2.3,
+    2.35
+   ],
+   [
+    2.0,
+    1.6
+   ],
+   [
+    0.9,
+    1.4
+   ],
+   [
+    1.2,
+    2.9
+   ],
+   [
+    1.2,
+    3.6
+   ],
+   [
+    1.2,
+    5.0
+   ],
+   [
+    1.2,
+    6.3
+   ],
+   [
+    1.45,
+    6.4
+   ],
+   [
+    5.6,
+    4.15
+   ],
+   [
+    9.0,
+    3.05
+   ],
+   [
+    9.06,
+    2.4
+   ],
+   [
+    9.06,
+    1.3
+   ]
+  ],
+  "route_links": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    9,
+    10
+   ],
+   [
+    10,
+    11
+   ],
+   [
+    2,
+    12
+   ],
+   [
+    1,
+    13
+   ],
+   [
+    13,
+    14
+   ],
+   [
+    14,
+    15
+   ]
+  ]
+ },
+ "uncertainties": [
+  "Wood grain, stone speckle, plaster and brushed metal are procedural approximations, not scanned textures (visual-only).",
+  "Appliance interiors are simplified but real cavities; rack wire density is a suggestion, not a full model.",
+  "Collision proxies for curved props (faucet, plants, fruit) are conservative AABBs; visible meshes remain the truth for visual checks.",
+  "Fruit is modeled as smooth supershapes with procedural bump skin; stem geometry simplified.",
+  "Terrace puddles are thin water-film discs; drainage flow is implied by slope, not simulated.",
+  "Cable paths for toaster (pantry, no outlet) are coiled behind the unit; documented as visual-only approximation."
+ ]
+}

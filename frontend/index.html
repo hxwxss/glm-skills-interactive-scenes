@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GLM sim-ready interactive kitchen — agent skill, validated Blender scene, and MuJoCo export">
+  <title>GLM Skills · Sim-Ready Interactive Kitchen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../README.md">GLM Skills · Sim-Ready Interactive Scenes</a>
+      <a class="text-link" href="../README.md">Repository README <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">PROMPT TO PHYSICS</p>
+      <h1 id="page-title">One prompt in, a validated MuJoCo kitchen out</h1>
+      <p class="lede">An agent skill that turns a one-line prompt into an interactive Blender scene, drives it through four geometric validation gates, exports a MuJoCo MJCF with 19 articulated joints, and renders the promo — autonomously.</p>
+      <div class="stats" aria-label="Project highlights">
+        <div><strong>19</strong><span>articulated joints</span></div>
+        <div><strong>813</strong><span>meshes</span></div>
+        <div><strong>MuJoCo 3.12</strong><span>validated export</span></div>
+        <div><strong>4 / 4</strong><span>validation gates</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="promo-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROMO</p>
+          <h2 id="promo-heading">The 18-second tour</h2>
+        </div>
+        <p class="video-note">Overview dolly, every articulated asset in action, lighting switch, and a full reset.</p>
+      </div>
+      <div class="video-frame promo-frame">
+        <video controls preload="metadata" playsinline aria-label="Kitchen promo video">
+          <source src="../videos/kitchen_promo.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>
+
+    <section aria-labelledby="gallery-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">JUDGESET</p>
+          <h2 id="gallery-heading">Fixed-camera renders (Cycles)</h2>
+        </div>
+        <p class="video-note">The 12-camera judgeset is re-rendered after every repair cycle — pixels are the acceptance test.</p>
+      </div>
+      <div id="render-grid" class="render-grid"></div>
+    </section>
+
+    <section aria-labelledby="mujoco-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SIM VIEW</p>
+          <h2 id="mujoco-heading">The same kitchen inside MuJoCo</h2>
+        </div>
+        <p class="video-note">Visual meshes exported next to box collision proxies; open <code>sim_ready/kitchen_mjcf/kitchen.xml</code> in the MuJoCo viewer and drag the joint sliders.</p>
+      </div>
+      <div class="video-frame">
+        <img src="../images/mujoco_view.png" alt="MuJoCo render of the exported kitchen scene">
+      </div>
+    </section>
+
+    <section class="next-step" aria-labelledby="next-heading">
+      <div>
+        <p class="eyebrow">REPRODUCE</p>
+        <h2 id="next-heading">Run the pipeline locally</h2>
+        <p>Blender 4.1.1 headless builds and validates the scene; MuJoCo 3.12 validates the export.</p>
+      </div>
+      <a class="button" href="../README.md#quick-start">View commands <span aria-hidden="true">&#8594;</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">Open-source demo assets for the <code>interactive-scene-sim-ready</code> skill.</div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

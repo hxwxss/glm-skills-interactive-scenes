@@ -1,0 +1,3 @@
+mujoco>=3.12
+numpy
+pillow

@@ -1,0 +1,562 @@
+<mujoco model="interactive_kitchen">
+  <compiler angle="degree" coordinate="local" meshdir="meshes"/>
+  <option timestep="0.002" gravity="0 0 -9.81"/>
+  <visual>
+    <global offwidth="1920" offheight="1080"/>
+  </visual>
+  <asset>
+    <mesh name="statics_art" file="statics_art.obj"/>
+    <mesh name="statics_bin" file="statics_bin.obj"/>
+    <mesh name="statics_bronze" file="statics_bronze.obj"/>
+    <mesh name="statics_cab_body" file="statics_cab_body.obj"/>
+    <mesh name="statics_cab_front" file="statics_cab_front.obj"/>
+    <mesh name="statics_cardboard" file="statics_cardboard.obj"/>
+    <mesh name="statics_ceramic" file="statics_ceramic.obj"/>
+    <mesh name="statics_cereal" file="statics_cereal.obj"/>
+    <mesh name="statics_doormat" file="statics_doormat.obj"/>
+    <mesh name="statics_glass" file="statics_glass.obj"/>
+    <mesh name="statics_leaf" file="statics_leaf.obj"/>
+    <mesh name="statics_linen" file="statics_linen.obj"/>
+    <mesh name="statics_milk" file="statics_milk.obj"/>
+    <mesh name="statics_misc" file="statics_misc.obj"/>
+    <mesh name="statics_oak" file="statics_oak.obj"/>
+    <mesh name="statics_oak_floor" file="statics_oak_floor.obj"/>
+    <mesh name="statics_plaster" file="statics_plaster.obj"/>
+    <mesh name="statics_plastic" file="statics_plastic.obj"/>
+    <mesh name="statics_steel" file="statics_steel.obj"/>
+    <mesh name="statics_steel_brushed" file="statics_steel_brushed.obj"/>
+    <mesh name="statics_steel_dark" file="statics_steel_dark.obj"/>
+    <mesh name="statics_stone" file="statics_stone.obj"/>
+    <mesh name="statics_stone_worktop" file="statics_stone_worktop.obj"/>
+    <mesh name="m_dishwasher_door" file="dishwasher_door.obj"/>
+    <mesh name="m_drawer_island_1" file="drawer_island_1.obj"/>
+    <mesh name="m_drawer_island_2" file="drawer_island_2.obj"/>
+    <mesh name="m_drawer_prep_1" file="drawer_prep_1.obj"/>
+    <mesh name="m_drawer_prep_2" file="drawer_prep_2.obj"/>
+    <mesh name="m_freezer_drawer" file="freezer_drawer.obj"/>
+    <mesh name="m_fridge_door" file="fridge_door.obj"/>
+    <mesh name="m_island_door" file="island_door.obj"/>
+    <mesh name="m_lower_door_a" file="lower_door_a.obj"/>
+    <mesh name="m_lower_door_b" file="lower_door_b.obj"/>
+    <mesh name="m_oven_door" file="oven_door.obj"/>
+    <mesh name="m_ovencol_top_door" file="ovencol_top_door.obj"/>
+    <mesh name="m_pantry_drawer" file="pantry_drawer.obj"/>
+    <mesh name="m_pantry_slide" file="pantry_slide.obj"/>
+    <mesh name="m_tall_door_a" file="tall_door_a.obj"/>
+    <mesh name="m_tall_door_b" file="tall_door_b.obj"/>
+    <mesh name="m_upper_door_a" file="upper_door_a.obj"/>
+    <mesh name="m_upper_door_b" file="upper_door_b.obj"/>
+    <mesh name="m_waste_pullout" file="waste_pullout.obj"/>
+  </asset>
+  <contact>
+    <exclude body1="pantry_slide" body2="world"/>
+  </contact>
+  <worldbody>
+    <geom name="floor" type="plane" size="30 30 0.1" rgba="0.45 0.38 0.30 1" pos="0 0 0"/>
+      <geom name="v_statics_art" type="mesh" mesh="statics_art" contype="0" conaffinity="0" group="1" rgba="0.55 0.52 0.45 1"/>
+      <geom name="v_statics_bin" type="mesh" mesh="statics_bin" contype="0" conaffinity="0" group="1" rgba="0.35 0.36 0.37 1"/>
+      <geom name="v_statics_bronze" type="mesh" mesh="statics_bronze" contype="0" conaffinity="0" group="1" rgba="0.45 0.28 0.15 1"/>
+      <geom name="v_statics_cab_body" type="mesh" mesh="statics_cab_body" contype="0" conaffinity="0" group="1" rgba="0.5 0.49 0.46 1"/>
+      <geom name="v_statics_cab_front" type="mesh" mesh="statics_cab_front" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="v_statics_cardboard" type="mesh" mesh="statics_cardboard" contype="0" conaffinity="0" group="1" rgba="0.55 0.42 0.28 1"/>
+      <geom name="v_statics_ceramic" type="mesh" mesh="statics_ceramic" contype="0" conaffinity="0" group="1" rgba="0.86 0.85 0.82 1"/>
+      <geom name="v_statics_cereal" type="mesh" mesh="statics_cereal" contype="0" conaffinity="0" group="1" rgba="0.86 0.55 0.25 1"/>
+      <geom name="v_statics_doormat" type="mesh" mesh="statics_doormat" contype="0" conaffinity="0" group="1" rgba="0.35 0.32 0.28 1"/>
+      <geom name="v_statics_glass" type="mesh" mesh="statics_glass" contype="0" conaffinity="0" group="1" rgba="0.75 0.85 0.85 0.35"/>
+      <geom name="v_statics_leaf" type="mesh" mesh="statics_leaf" contype="0" conaffinity="0" group="1" rgba="0.25 0.4 0.16 1"/>
+      <geom name="v_statics_linen" type="mesh" mesh="statics_linen" contype="0" conaffinity="0" group="1" rgba="0.72 0.68 0.6 1"/>
+      <geom name="v_statics_milk" type="mesh" mesh="statics_milk" contype="0" conaffinity="0" group="1" rgba="0.9 0.9 0.88 1"/>
+      <geom name="v_statics_misc" type="mesh" mesh="statics_misc" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="v_statics_oak" type="mesh" mesh="statics_oak" contype="0" conaffinity="0" group="1" rgba="0.52 0.38 0.24 1"/>
+      <geom name="v_statics_oak_floor" type="mesh" mesh="statics_oak_floor" contype="0" conaffinity="0" group="1" rgba="0.45 0.31 0.19 1"/>
+      <geom name="v_statics_plaster" type="mesh" mesh="statics_plaster" contype="0" conaffinity="0" group="1" rgba="0.84 0.82 0.78 1"/>
+      <geom name="v_statics_plastic" type="mesh" mesh="statics_plastic" contype="0" conaffinity="0" group="1" rgba="0.5 0.5 0.5 1"/>
+      <geom name="v_statics_steel" type="mesh" mesh="statics_steel" contype="0" conaffinity="0" group="1" rgba="0.58 0.58 0.6 1"/>
+      <geom name="v_statics_steel_brushed" type="mesh" mesh="statics_steel_brushed" contype="0" conaffinity="0" group="1" rgba="0.58 0.58 0.6 1"/>
+      <geom name="v_statics_steel_dark" type="mesh" mesh="statics_steel_dark" contype="0" conaffinity="0" group="1" rgba="0.12 0.12 0.13 1"/>
+      <geom name="v_statics_stone" type="mesh" mesh="statics_stone" contype="0" conaffinity="0" group="1" rgba="0.62 0.6 0.57 1"/>
+      <geom name="v_statics_stone_worktop" type="mesh" mesh="statics_stone_worktop" contype="0" conaffinity="0" group="1" rgba="0.2 0.2 0.21 1"/>
+      <geom name="c_oak_floor_0" type="box" pos="4.90000 3.70000 -0.06000" size="5.05000 3.85000 0.06000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_1" type="box" pos="1.32500 7.47500 1.50000" size="1.47500 0.07500 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_2" type="box" pos="9.27500 7.47500 1.50000" size="0.67500 0.07500 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_3" type="box" pos="5.70000 7.47500 2.85000" size="2.90000 0.07500 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_4" type="box" pos="4.90000 -0.07500 1.50000" size="5.05000 0.07500 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_5" type="box" pos="-0.07500 1.15000 1.50000" size="0.07500 1.30000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_6" type="box" pos="-0.07500 5.45000 1.50000" size="0.07500 2.10000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_7" type="box" pos="-0.07500 2.90000 0.57500" size="0.07500 0.45000 0.57500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_8" type="box" pos="-0.07500 2.90000 2.67500" size="0.07500 0.45000 0.32500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_9" type="box" pos="9.87500 1.60000 1.50000" size="0.07500 1.75000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_10" type="box" pos="9.87500 5.95000 1.50000" size="0.07500 1.60000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_11" type="box" pos="9.87500 3.85000 2.57500" size="0.07500 0.50000 0.42500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_12" type="box" pos="8.26000 1.20000 1.50000" size="0.06000 1.20000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_13" type="box" pos="8.27500 2.34000 1.50000" size="0.07500 0.06000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_14" type="box" pos="9.52500 2.34000 1.50000" size="0.27500 0.06000 1.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_15" type="box" pos="8.80000 2.34000 2.55000" size="0.45000 0.06000 0.45000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_16" type="box" pos="0.00700 5.37500 0.03000" size="0.00700 2.02500 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_17" type="box" pos="9.79300 5.87500 0.03000" size="0.00700 1.52500 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_18" type="box" pos="9.79300 1.67500 0.03000" size="0.00700 1.67500 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_19" type="box" pos="6.40000 0.00700 0.03000" size="1.00000 0.00700 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_20" type="box" pos="1.40000 7.39300 0.03000" size="1.40000 0.00700 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_21" type="box" pos="9.20000 7.39300 0.03000" size="0.60000 0.00700 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_22" type="box" pos="-0.07500 2.90000 1.18000" size="0.03500 0.45000 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_23" type="box" pos="-0.07500 2.90000 2.32000" size="0.03500 0.45000 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_24" type="box" pos="-0.07500 2.48000 1.75000" size="0.03500 0.03000 0.60000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_25" type="box" pos="-0.07500 3.32000 1.75000" size="0.03500 0.03000 0.60000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_26" type="box" pos="-0.07500 2.90000 1.75000" size="0.02500 0.01750 0.60000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_27" type="box" pos="0.02000 2.90000 1.13500" size="0.08000 0.50000 0.01500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_28" type="box" pos="-0.16000 2.90000 2.37500" size="0.01000 0.48000 0.02500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_29" type="box" pos="5.70000 7.48000 0.01200" size="2.90000 0.08000 0.01200" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_30" type="box" pos="5.70000 7.47000 2.66000" size="2.90000 0.07000 0.04000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_31" type="box" pos="2.80000 7.45000 1.35000" size="0.03500 0.05000 1.32000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_32" type="box" pos="4.25000 7.45000 1.35000" size="0.03500 0.05000 1.32000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_33" type="box" pos="5.70000 7.45000 1.35000" size="0.03500 0.05000 1.32000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_34" type="box" pos="7.15000 7.45000 1.35000" size="0.03500 0.05000 1.32000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_35" type="box" pos="8.60000 7.45000 1.35000" size="0.03500 0.05000 1.32000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_36" type="box" pos="3.52500 7.44500 1.35000" size="0.68250 0.01200 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_37" type="box" pos="2.84250 7.44500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_38" type="box" pos="4.20750 7.44500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_39" type="box" pos="3.52500 7.44500 0.10000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_40" type="box" pos="3.52500 7.44500 2.60000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_41" type="box" pos="4.97500 7.51500 1.35000" size="0.68250 0.01200 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_42" type="box" pos="4.29250 7.51500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_43" type="box" pos="5.65750 7.51500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_44" type="box" pos="4.97500 7.51500 0.10000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_45" type="box" pos="4.97500 7.51500 2.60000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_46" type="box" pos="6.42500 7.51500 1.35000" size="0.68250 0.01200 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_47" type="box" pos="5.74250 7.51500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_48" type="box" pos="7.10750 7.51500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_49" type="box" pos="6.42500 7.51500 0.10000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_50" type="box" pos="6.42500 7.51500 2.60000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_51" type="box" pos="7.87500 7.44500 1.35000" size="0.68250 0.01200 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_52" type="box" pos="7.19250 7.44500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_53" type="box" pos="8.55750 7.44500 1.35000" size="0.02250 0.01700 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_54" type="box" pos="7.87500 7.44500 0.10000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_55" type="box" pos="7.87500 7.44500 2.60000" size="0.68250 0.01700 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_56" type="box" pos="9.87500 3.37750 1.07500" size="0.04500 0.02750 1.07500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_57" type="box" pos="9.87500 4.32250 1.07500" size="0.04500 0.02750 1.07500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_58" type="box" pos="9.87500 3.85000 2.12250" size="0.04500 0.50000 0.02750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_59" type="box" pos="9.68099 3.89424 1.07500" size="0.21457 0.44491 1.06500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_60" type="box" pos="10.67500 3.85000 -0.02500" size="0.87500 1.00000 0.02500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_misc_61" type="box" pos="10.67500 3.85000 2.64000" size="0.87500 1.00000 0.04000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_62" type="box" pos="10.67500 2.80000 1.30000" size="0.87500 0.05000 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_63" type="box" pos="10.67500 4.90000 1.30000" size="0.87500 0.05000 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plaster_64" type="box" pos="11.45000 3.85000 1.30000" size="0.05000 1.00000 1.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_doormat_65" type="box" pos="9.05000 3.85000 0.00800" size="0.37500 0.25000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_worktop_66" type="box" pos="0.33250 2.23500 0.88500" size="0.33250 0.43500 0.01500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_worktop_67" type="box" pos="0.33250 5.26500 0.88500" size="0.33250 2.13500 0.01500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_worktop_68" type="box" pos="0.01000 4.60000 1.17500" size="0.01000 2.80000 0.27500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_69" type="box" pos="0.32500 2.10000 0.86100" size="0.32500 0.30000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_70" type="box" pos="0.32500 2.10000 0.10900" size="0.32500 0.30000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_71" type="box" pos="0.32500 1.80900 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_72" type="box" pos="0.32500 2.39100 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_73" type="box" pos="0.00600 2.10000 0.48500" size="0.00600 0.30000 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_74" type="box" pos="0.32500 2.90000 0.86100" size="0.32500 0.45000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_75" type="box" pos="0.32500 2.90000 0.10900" size="0.32500 0.45000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_76" type="box" pos="0.32500 2.45900 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_77" type="box" pos="0.32500 3.34100 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_78" type="box" pos="0.00600 2.90000 0.48500" size="0.00600 0.45000 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_79" type="box" pos="0.65950 2.90000 0.48600" size="0.00950 0.44700 0.37250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_80" type="box" pos="0.34000 2.90000 0.68000" size="0.29000 0.21000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_81" type="box" pos="0.34000 2.69600 0.77500" size="0.29000 0.00600 0.09500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_82" type="box" pos="0.34000 3.10400 0.77500" size="0.29000 0.00600 0.09500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_83" type="box" pos="0.05600 2.90000 0.77500" size="0.00600 0.19800 0.09500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_84" type="box" pos="0.62400 2.90000 0.77500" size="0.00600 0.19800 0.09500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_85" type="box" pos="0.10000 2.90000 1.24350" size="0.12700 0.01700 0.06350" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_86" type="box" pos="0.32000 3.65000 0.46000" size="0.30000 0.30000 0.36000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_87" type="box" pos="0.33000 3.65000 0.46000" size="0.27500 0.25000 0.30000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_88" type="box" pos="0.30000 3.65000 0.62000" size="0.24000 0.22000 0.00750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_89" type="box" pos="0.30000 3.65000 0.30000" size="0.24000 0.22000 0.00750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_90" type="box" pos="0.32500 3.67500 0.05000" size="0.30000 0.27500 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_91" type="box" pos="0.32500 4.45000 0.86100" size="0.32500 0.50000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_92" type="box" pos="0.32500 4.45000 0.10900" size="0.32500 0.50000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_93" type="box" pos="0.32500 3.95900 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_94" type="box" pos="0.32500 4.94100 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_95" type="box" pos="0.00600 4.45000 0.48500" size="0.00600 0.50000 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_96" type="box" pos="0.32500 4.47500 0.05000" size="0.30000 0.47500 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_97" type="box" pos="0.32500 4.70000 0.44000" size="0.31500 0.24000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_98" type="box" pos="0.30000 4.70000 0.46800" size="0.11500 0.11500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_99" type="box" pos="0.30000 4.70000 0.48800" size="0.11500 0.11500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_100" type="box" pos="0.30000 4.70000 0.50800" size="0.11500 0.11500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_101" type="box" pos="0.30000 4.70000 0.52800" size="0.11500 0.11500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_102" type="box" pos="0.32500 5.35000 0.86100" size="0.32500 0.40000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_103" type="box" pos="0.32500 5.35000 0.10900" size="0.32500 0.40000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_104" type="box" pos="0.32500 4.95900 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_105" type="box" pos="0.32500 5.74100 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_106" type="box" pos="0.00600 5.35000 0.48500" size="0.00600 0.40000 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_107" type="box" pos="0.32500 5.37500 0.05000" size="0.30000 0.37500 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_108" type="box" pos="0.65950 5.35000 0.48850" size="0.00950 0.39700 0.37550" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_109" type="box" pos="0.25000 5.46000 1.78000" size="0.25000 0.39000 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_110" type="box" pos="0.47500 5.46000 1.70000" size="0.01500 0.32000 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_111" type="box" pos="0.25000 5.35000 2.50000" size="0.12000 0.12000 0.50000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_112" type="box" pos="0.32500 6.05000 0.86100" size="0.32500 0.30000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_113" type="box" pos="0.32500 6.05000 0.10900" size="0.32500 0.30000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_114" type="box" pos="0.32500 5.75900 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_115" type="box" pos="0.32500 6.34100 0.48500" size="0.32500 0.00900 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_116" type="box" pos="0.00600 6.05000 0.48500" size="0.00600 0.30000 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_117" type="box" pos="0.32500 6.07500 0.05000" size="0.30000 0.27500 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_118" type="box" pos="0.65950 6.05000 0.48850" size="0.00950 0.29700 0.37550" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_119" type="box" pos="0.32500 6.87500 2.44100" size="0.32500 0.52500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_120" type="box" pos="0.32500 6.87500 0.10900" size="0.32500 0.52500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_121" type="box" pos="0.32500 6.35900 1.27500" size="0.32500 0.00900 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_122" type="box" pos="0.32500 7.39100 1.27500" size="0.32500 0.00900 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_123" type="box" pos="0.00600 6.87500 1.27500" size="0.00600 0.52500 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_124" type="box" pos="0.32500 6.90000 0.05000" size="0.30000 0.50000 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_125" type="box" pos="0.65950 6.58500 2.01250" size="0.00950 0.20500 0.42750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_126" type="box" pos="0.32500 6.87500 2.10000" size="0.29500 0.49500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_127" type="box" pos="0.17500 4.45000 2.24100" size="0.17500 0.50000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_128" type="box" pos="0.17500 4.45000 1.45900" size="0.17500 0.50000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_129" type="box" pos="0.17500 3.95900 1.85000" size="0.17500 0.00900 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_130" type="box" pos="0.17500 4.94100 1.85000" size="0.17500 0.00900 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_131" type="box" pos="0.00600 4.45000 1.85000" size="0.00600 0.50000 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_132" type="box" pos="0.17500 4.45000 1.81000" size="0.16500 0.49000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_133" type="box" pos="0.17500 4.45000 2.07400" size="0.16500 0.49000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_134" type="box" pos="0.16000 4.68000 1.51000" size="0.09000 0.08934 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_135" type="box" pos="0.16000 4.68000 1.57500" size="0.09000 0.08934 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_136" type="box" pos="0.16000 4.68000 1.64000" size="0.09000 0.08934 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_137" type="box" pos="0.17500 6.05000 2.24100" size="0.17500 0.30000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_138" type="box" pos="0.17500 6.05000 1.45900" size="0.17500 0.30000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_139" type="box" pos="0.17500 5.75900 1.85000" size="0.17500 0.00900 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_140" type="box" pos="0.17500 6.34100 1.85000" size="0.17500 0.00900 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_141" type="box" pos="0.00600 6.05000 1.85000" size="0.00600 0.30000 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_142" type="box" pos="0.35950 6.05000 1.85000" size="0.00950 0.29700 0.39700" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_143" type="box" pos="0.14000 2.15000 1.73000" size="0.12000 0.35000 0.01750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_144" type="box" pos="0.14000 2.15000 2.07000" size="0.12000 0.35000 0.01750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_145" type="box" pos="0.16500 3.65000 1.85000" size="0.16500 0.00950 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_146" type="box" pos="0.75000 0.32500 2.44100" size="0.60000 0.32500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_147" type="box" pos="0.75000 0.32500 0.10900" size="0.60000 0.32500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_148" type="box" pos="0.15900 0.32500 1.27500" size="0.00900 0.32500 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_149" type="box" pos="1.34100 0.32500 1.27500" size="0.00900 0.32500 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_150" type="box" pos="0.75000 0.00600 1.27500" size="0.60000 0.00600 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_151" type="box" pos="0.14000 0.32500 1.27500" size="0.01000 0.32500 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_152" type="box" pos="1.20000 0.35000 0.05000" size="1.02500 0.30000 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_153" type="box" pos="0.75000 0.65950 2.26000" size="0.57000 0.00950 0.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_154" type="box" pos="1.80000 0.32500 2.44100" size="0.45000 0.32500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_155" type="box" pos="1.80000 0.32500 0.10900" size="0.45000 0.32500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_156" type="box" pos="1.35900 0.32500 1.27500" size="0.00900 0.32500 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_157" type="box" pos="2.24100 0.32500 1.27500" size="0.00900 0.32500 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_158" type="box" pos="1.80000 0.00600 1.27500" size="0.45000 0.00600 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_159" type="box" pos="1.80000 0.32500 0.55000" size="0.44000 0.29500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_160" type="box" pos="1.80000 0.32500 1.05000" size="0.44000 0.29500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_161" type="box" pos="1.80000 0.32500 1.55000" size="0.44000 0.29500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_162" type="box" pos="1.80000 0.32500 2.05000" size="0.44000 0.29500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_bin_163" type="box" pos="1.62000 0.33000 0.66000" size="0.15000 0.18000 0.11000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_bin_164" type="box" pos="1.62000 0.33000 1.16000" size="0.15000 0.18000 0.11000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_bin_165" type="box" pos="1.62000 0.33000 1.66000" size="0.15000 0.18000 0.11000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cardboard_166" type="box" pos="2.02000 0.33000 0.66000" size="0.13000 0.15000 0.10000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_167" type="box" pos="2.04000 0.33000 2.14000" size="0.11000 0.13000 0.08000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_168" type="box" pos="2.32000 0.65950 1.27500" size="0.03000 0.00950 1.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_169" type="box" pos="2.30000 4.40000 0.85100" size="0.55000 1.20000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_170" type="box" pos="2.30000 4.40000 0.10900" size="0.55000 1.20000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_171" type="box" pos="2.30000 3.20900 0.48000" size="0.55000 0.00900 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_172" type="box" pos="2.30000 5.59100 0.48000" size="0.55000 0.00900 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_173" type="box" pos="2.84400 4.40000 0.48000" size="0.00600 1.20000 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_174" type="box" pos="2.30000 4.43000 0.05000" size="0.52000 1.17000 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_worktop_175" type="box" pos="2.30000 4.40000 0.88000" size="0.56000 1.20000 0.02000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_176" type="box" pos="2.83900 4.40000 0.45000" size="0.01100 1.20000 0.45000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_177" type="box" pos="2.30000 3.22800 0.48000" size="0.53000 0.00900 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_178" type="box" pos="2.30000 3.37000 0.42000" size="0.53000 0.15000 0.01500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_179" type="box" pos="2.30000 5.17000 0.44000" size="0.52000 0.40000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_stone_worktop_180" type="box" pos="9.06000 0.43000 0.88000" size="0.72000 0.31000 0.02000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_181" type="box" pos="9.06000 0.43000 0.85100" size="0.72000 0.31000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_182" type="box" pos="9.06000 0.43000 0.10900" size="0.72000 0.31000 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_183" type="box" pos="8.34900 0.43000 0.48000" size="0.00900 0.31000 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_184" type="box" pos="9.77100 0.43000 0.48000" size="0.00900 0.31000 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_185" type="box" pos="9.06000 0.12600 0.48000" size="0.72000 0.00600 0.38000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_186" type="box" pos="9.08500 0.43000 0.05000" size="0.69500 0.28500 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_187" type="box" pos="9.06000 0.74950 0.52000" size="0.42500 0.00950 0.10000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_front_188" type="box" pos="9.06000 0.74950 0.30000" size="0.70000 0.00950 0.20000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_189" type="box" pos="9.67500 1.51000 0.55000" size="0.12500 0.75000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_190" type="box" pos="8.47000 1.51000 0.55000" size="0.15000 0.75000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_191" type="box" pos="9.67500 1.51000 1.10000" size="0.12500 0.75000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_192" type="box" pos="8.47000 1.51000 1.10000" size="0.15000 0.75000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_193" type="box" pos="9.67500 1.51000 1.65000" size="0.12500 0.75000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_194" type="box" pos="8.47000 1.51000 1.65000" size="0.15000 0.75000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_195" type="box" pos="9.06000 2.09000 1.65000" size="0.42000 0.15000 0.01400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_196" type="box" pos="9.65000 1.05000 1.37500" size="0.14000 0.00750 0.27500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_197" type="box" pos="9.65000 1.55000 1.37500" size="0.14000 0.00750 0.27500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_bronze_198" type="box" pos="8.45000 2.46000 2.32000" size="1.20000 0.02500 0.02500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_199" type="box" pos="6.40000 0.23500 0.75100" size="1.00000 0.21500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_200" type="box" pos="6.40000 0.23500 0.08900" size="1.00000 0.21500 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_201" type="box" pos="5.40900 0.23500 0.42000" size="0.00900 0.21500 0.34000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_202" type="box" pos="7.39100 0.23500 0.42000" size="0.00900 0.21500 0.34000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cab_body_203" type="box" pos="6.40000 0.02600 0.42000" size="1.00000 0.00600 0.34000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_204" type="box" pos="6.40000 0.23500 0.78000" size="1.01500 0.22250 0.01250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_205" type="box" pos="5.73333 0.45950 0.42000" size="0.33033 0.00950 0.31000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_206" type="box" pos="6.40000 0.45950 0.42000" size="0.33033 0.00950 0.31000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_207" type="box" pos="7.06667 0.45950 0.42000" size="0.33033 0.00950 0.31000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_208" type="box" pos="0.28000 6.73000 1.26000" size="0.27500 0.23000 0.16000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_209" type="box" pos="0.26000 6.73000 1.18000" size="0.21000 0.20000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_210" type="box" pos="0.26000 6.73000 1.32000" size="0.21000 0.20000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_211" type="box" pos="0.65900 6.73000 1.53500" size="0.00900 0.29000 0.04500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_212" type="box" pos="0.65950 6.73000 0.73500" size="0.00950 0.29000 0.28500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_213" type="box" pos="0.75000 0.03600 1.65500" size="0.54000 0.00600 0.43500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_214" type="box" pos="0.22600 0.32000 1.65500" size="0.00600 0.27500 0.43500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_215" type="box" pos="1.27400 0.32000 1.65500" size="0.00600 0.27500 0.43500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_216" type="box" pos="0.75000 0.32000 2.08400" size="0.54000 0.29000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_217" type="box" pos="0.75000 0.32000 1.21600" size="0.54000 0.29000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_218" type="box" pos="0.75000 0.32000 0.11400" size="0.54000 0.29000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_219" type="box" pos="0.75000 0.30000 1.36000" size="0.51000 0.26000 0.00700" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_220" type="box" pos="0.75000 0.30000 1.64000" size="0.51000 0.26000 0.00700" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_221" type="box" pos="0.75000 0.30000 1.92000" size="0.51000 0.26000 0.00700" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plastic_222" type="box" pos="0.52000 0.28000 1.40000" size="0.24000 0.20000 0.08000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plastic_223" type="box" pos="0.96000 0.28000 1.40000" size="0.24000 0.20000 0.08000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_224" type="box" pos="0.36000 6.23000 1.00000" size="0.10400 0.10400 0.10000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_225" type="box" pos="0.34000 5.92000 1.09000" size="0.12000 0.19000 0.18000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_226" type="box" pos="0.34000 5.94000 1.29500" size="0.11000 0.15000 0.03000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_227" type="box" pos="9.10000 0.50000 0.99500" size="0.10000 0.15000 0.09500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_milk_228" type="box" pos="0.52000 0.28000 1.47700" size="0.04250 0.04250 0.11000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_229" type="box" pos="0.30000 0.30000 1.49050" size="0.03600 0.03600 0.11350" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_230" type="box" pos="0.40000 0.30000 1.49050" size="0.03600 0.03600 0.11350" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_231" type="box" pos="5.90000 5.62000 0.73000" size="1.00000 0.47500 0.02000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_232" type="box" pos="5.90000 5.20500 0.67500" size="0.92000 0.02250 0.03500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_233" type="box" pos="5.90000 6.03500 0.67500" size="0.92000 0.02250 0.03500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_234" type="box" pos="5.01000 5.25500 0.35500" size="0.06200 0.06200 0.35500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_235" type="box" pos="6.79000 5.25500 0.35500" size="0.06200 0.06200 0.35500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_236" type="box" pos="5.01000 5.98500 0.35500" size="0.06200 0.06200 0.35500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_237" type="box" pos="6.79000 5.98500 0.35500" size="0.06200 0.06200 0.35500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_238" type="box" pos="5.45000 6.34000 0.45000" size="0.22000 0.22000 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_239" type="box" pos="5.63000 6.14000 0.62000" size="0.01657 0.04745 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_240" type="box" pos="5.27000 6.14000 0.62000" size="0.01657 0.04745 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_241" type="box" pos="5.44878 6.10859 0.80580" size="0.19402 0.17677 0.03906" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_242" type="box" pos="5.45000 6.34000 0.16000" size="0.24800 0.24548 0.00693" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_243" type="box" pos="6.38000 6.34000 0.45000" size="0.24179 0.24179 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_244" type="box" pos="6.53811 6.12228 0.62000" size="0.02144 0.04892 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_245" type="box" pos="6.18008 6.15991 0.62000" size="0.02144 0.04892 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_246" type="box" pos="6.35460 6.10999 0.80580" size="0.19353 0.18418 0.03906" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_247" type="box" pos="6.38000 6.34000 0.16000" size="0.27230 0.27005 0.00693" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_248" type="box" pos="5.45000 4.90000 0.45000" size="0.22000 0.22000 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_249" type="box" pos="5.27000 5.10000 0.62000" size="0.01657 0.04745 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_250" type="box" pos="5.63000 5.10000 0.62000" size="0.01657 0.04745 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_251" type="box" pos="5.45122 5.13141 0.80580" size="0.19402 0.17677 0.03906" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_252" type="box" pos="5.45000 4.90000 0.16000" size="0.24800 0.24548 0.00693" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_253" type="box" pos="6.38000 4.62000 0.45000" size="0.24848 0.24848 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_254" type="box" pos="6.17392 4.79300 0.62000" size="0.02302 0.04930 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_255" type="box" pos="6.53041 4.84310 0.62000" size="0.02302 0.04930 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_256" type="box" pos="6.34900 4.84932 0.80580" size="0.19138 0.16389 0.03906" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_257" type="box" pos="6.38000 4.62000 0.16000" size="0.27975 0.27760 0.00693" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_258" type="box" pos="4.62000 5.62000 0.45000" size="0.22000 0.22000 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_259" type="box" pos="4.42000 5.44000 0.62000" size="0.04745 0.01657 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_260" type="box" pos="4.42000 5.80000 0.62000" size="0.04745 0.01657 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_261" type="box" pos="4.38859 5.62122 0.80580" size="0.17677 0.19402 0.03906" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_262" type="box" pos="4.62000 5.62000 0.16000" size="0.24548 0.24800 0.00693" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_263" type="box" pos="7.18000 5.62000 0.45000" size="0.22754 0.22754 0.02250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_264" type="box" pos="7.38616 5.79291 0.62000" size="0.04800 0.01822 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_265" type="box" pos="7.37360 5.43313 0.62000" size="0.04800 0.01822 0.22022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_266" type="box" pos="7.41122 5.61071 0.80580" size="0.17946 0.19409 0.03906" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_267" type="box" pos="7.18000 5.62000 0.16000" size="0.25398 0.25642 0.00693" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_268" type="box" pos="3.34000 3.72000 0.65000" size="0.17500 0.17500 0.01900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_269" type="box" pos="3.34000 3.72000 0.22000" size="0.14700 0.14700 0.00606" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_270" type="box" pos="3.34000 4.42000 0.65000" size="0.17500 0.17500 0.01900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_271" type="box" pos="3.34000 4.42000 0.22000" size="0.14700 0.14700 0.00606" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_272" type="box" pos="3.34000 5.12000 0.65000" size="0.19233 0.19233 0.01900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_273" type="box" pos="3.34000 5.12000 0.22000" size="0.16156 0.16156 0.00606" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_274" type="box" pos="2.12000 4.58000 0.93600" size="0.09800 0.09800 0.03600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_275" type="box" pos="2.34000 3.78000 0.95300" size="0.05316 0.05316 0.04600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_276" type="box" pos="2.56000 4.16000 1.03800" size="0.08609 0.05331 0.13800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_277" type="box" pos="2.48000 5.10000 0.94400" size="0.14000 0.14000 0.04400" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_278" type="box" pos="0.09000 4.42000 1.03000" size="0.02725 0.17000 0.12949" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_279" type="box" pos="2.20000 3.42000 1.01850" size="0.03500 0.03464 0.11850" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_280" type="box" pos="0.16000 2.55000 0.98100" size="0.04200 0.04200 0.08100" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_brushed_281" type="box" pos="0.34000 4.02000 0.90600" size="0.18000 0.13000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_282" type="box" pos="0.28000 4.02000 0.98300" size="0.11800 0.11800 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_283" type="box" pos="0.37000 4.02000 1.00500" size="0.11800 0.11800 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_284" type="box" pos="8.47000 1.15000 0.63353" size="0.04621 0.04621 0.06953" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_285" type="box" pos="9.62000 1.15000 0.64508" size="0.04294 0.04294 0.08108" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_286" type="box" pos="8.47000 1.43000 0.64422" size="0.04275 0.04275 0.08022" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_287" type="box" pos="9.62000 1.43000 0.63110" size="0.04764 0.04764 0.06710" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_288" type="box" pos="8.47000 1.71000 0.65381" size="0.04752 0.04752 0.08981" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_289" type="box" pos="9.62000 1.71000 0.64782" size="0.04490 0.04490 0.08382" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_290" type="box" pos="8.47000 1.15000 1.19090" size="0.04950 0.04950 0.07690" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_plastic_291" type="box" pos="8.47000 1.15000 1.16783" size="0.04150 0.04150 0.06097" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_glass_292" type="box" pos="9.62000 1.15000 1.20475" size="0.04261 0.04261 0.09075" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_293" type="box" pos="9.64000 1.05000 1.80200" size="0.08000 0.03500 0.13800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_294" type="box" pos="8.45000 1.05000 1.80200" size="0.08510 0.04921 0.13800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_295" type="box" pos="9.64000 1.50000 1.25200" size="0.08000 0.03500 0.13800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_296" type="box" pos="8.45000 1.50000 1.25200" size="0.08536 0.05020 0.13800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cereal_297" type="box" pos="8.47000 1.75000 1.25200" size="0.08409 0.04579 0.13800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cardboard_298" type="box" pos="8.70000 0.40000 0.60000" size="0.08000 0.05500 0.02500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cardboard_299" type="box" pos="9.00000 0.40000 0.60000" size="0.08000 0.05500 0.02500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_cardboard_300" type="box" pos="9.30000 0.40000 0.60000" size="0.08000 0.05500 0.02500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_301" type="box" pos="9.61000 2.90000 0.80000" size="0.15000 0.30000 0.01500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_302" type="box" pos="9.61000 2.66000 0.38500" size="0.13000 0.01500 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_303" type="box" pos="9.61000 3.14000 0.38500" size="0.13000 0.01500 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_steel_dark_304" type="box" pos="9.58000 3.06000 0.82800" size="0.11500 0.11500 0.01300" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_linen_305" type="box" pos="9.60000 2.76000 0.82600" size="0.09453 0.12006 0.01100" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_306" type="box" pos="3.55000 0.01750 1.55000" size="0.27500 0.01750 0.35000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_art_307" type="box" pos="3.55000 0.04000 1.55000" size="0.24500 0.00600 0.32000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oak_308" type="box" pos="4.45000 0.01750 1.55000" size="0.21000 0.01750 0.27500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_art_309" type="box" pos="4.45000 0.04000 1.55000" size="0.18000 0.00600 0.24500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_art_310" type="box" pos="2.30000 3.38000 0.48000" size="0.10616 0.08343 0.01500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_art_311" type="box" pos="6.55000 0.23000 0.94000" size="0.01750 0.13211 0.16536" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_312" type="box" pos="4.35000 6.95000 0.17500" size="0.21000 0.21000 0.17500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_misc_313" type="box" pos="4.35000 6.95000 0.34500" size="0.17500 0.17500 0.01000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_314" type="box" pos="4.41284 7.12654 1.79448" size="0.12542 0.12542 0.10034" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_315" type="box" pos="4.40918 6.98134 1.63884" size="0.13643 0.13643 0.10915" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_316" type="box" pos="4.49517 7.04775 1.74828" size="0.14041 0.14041 0.11233" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_317" type="box" pos="4.41756 7.10607 1.70993" size="0.13360 0.13360 0.10688" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_318" type="box" pos="4.47557 6.94068 1.79233" size="0.12732 0.12732 0.10186" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_319" type="box" pos="4.34260 7.01285 1.70638" size="0.14188 0.14188 0.11351" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_leaf_320" type="box" pos="4.49031 7.02495 1.84714" size="0.13254 0.13254 0.10603" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_321" type="box" pos="0.00000 2.70000 1.21750" size="0.07000 0.07000 0.05250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_322" type="box" pos="6.38000 5.28000 0.76600" size="0.11800 0.11800 0.00900" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ceramic_323" type="box" pos="6.62000 5.24000 0.80200" size="0.05635 0.05635 0.04600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    <body name="dishwasher_door" pos="0.66000 3.65000 0.86400">
+      <joint name="dishwasher_door" type="hinge" axis="0.00000 1.00000 0.00000" range="-92.0000 0.0000" damping="0.5"/>
+      <geom name="v_dishwasher_door" type="mesh" mesh="m_dishwasher_door" contype="0" conaffinity="0" group="1" rgba="0.58 0.58 0.6 1"/>
+      <geom name="c_dishwasher_door_0" type="box" pos="0.00000 0.00000 -0.29000" size="0.01000 0.29700 0.29000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_dishwasher_door_1" type="box" pos="0.01400 0.00000 -0.03000" size="0.00300 0.27500 0.01750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="drawer_island_1" pos="1.74050 3.61000 0.78600">
+      <joint name="drawer_island_1" type="slide" axis="-1.00000 0.00000 0.00000" range="0.0000 0.4500" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_drawer_island_1" type="mesh" mesh="m_drawer_island_1" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_drawer_island_1_0" type="box" pos="0.26950 0.34300 -0.00300" size="0.26000 0.00700 0.05500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_1_1" type="box" pos="0.26950 -0.34300 -0.00300" size="0.26000 0.00700 0.05500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_1_2" type="box" pos="0.52250 0.00000 -0.00300" size="0.00700 0.33600 0.05500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_1_3" type="box" pos="0.26950 0.00000 -0.06400" size="0.26000 0.33600 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_1_4" type="box" pos="0.00000 0.00000 0.00000" size="0.00950 0.36700 0.07000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_1_5" type="box" pos="-0.05150 0.00000 0.02500" size="0.00780 0.16000 0.00800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="drawer_island_2" pos="1.74050 4.37000 0.57100">
+      <joint name="drawer_island_2" type="slide" axis="-1.00000 0.00000 0.00000" range="0.0000 0.4500" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_drawer_island_2" type="mesh" mesh="m_drawer_island_2" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_drawer_island_2_0" type="box" pos="0.26950 0.34300 -0.01300" size="0.26000 0.00700 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_2_1" type="box" pos="0.26950 -0.34300 -0.01300" size="0.26000 0.00700 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_2_2" type="box" pos="0.52250 0.00000 -0.01300" size="0.00700 0.33600 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_2_3" type="box" pos="0.26950 0.00000 -0.13900" size="0.26000 0.33600 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_2_4" type="box" pos="0.00000 0.00000 0.00000" size="0.00950 0.36700 0.14500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_island_2_5" type="box" pos="-0.05150 0.00000 0.10000" size="0.00780 0.16000 0.00800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="drawer_prep_1" pos="0.65950 4.20000 0.79600">
+      <joint name="drawer_prep_1" type="slide" axis="1.00000 0.00000 0.00000" range="0.0000 0.4500" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_drawer_prep_1" type="mesh" mesh="m_drawer_prep_1" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_drawer_prep_1_0" type="box" pos="-0.25950 0.22300 -0.00100" size="0.25000 0.00700 0.05500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_1_1" type="box" pos="-0.25950 -0.22300 -0.00100" size="0.25000 0.00700 0.05500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_1_2" type="box" pos="-0.50250 0.00000 -0.00100" size="0.00700 0.21600 0.05500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_1_3" type="box" pos="-0.25950 0.00000 -0.06200" size="0.25000 0.21600 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_1_4" type="box" pos="0.00000 0.00000 0.00000" size="0.00950 0.24700 0.06800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_1_5" type="box" pos="0.05150 0.00000 0.02300" size="0.00780 0.13585 0.00800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="drawer_prep_2" pos="0.65950 4.20000 0.58500">
+      <joint name="drawer_prep_2" type="slide" axis="1.00000 0.00000 0.00000" range="0.0000 0.4500" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_drawer_prep_2" type="mesh" mesh="m_drawer_prep_2" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_drawer_prep_2_0" type="box" pos="-0.25950 0.22300 -0.01300" size="0.25000 0.00700 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_2_1" type="box" pos="-0.25950 -0.22300 -0.01300" size="0.25000 0.00700 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_2_2" type="box" pos="-0.50250 0.00000 -0.01300" size="0.00700 0.21600 0.12000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_2_3" type="box" pos="-0.25950 0.00000 -0.13900" size="0.25000 0.21600 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_2_4" type="box" pos="0.00000 0.00000 0.00000" size="0.00950 0.24700 0.14500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_drawer_prep_2_5" type="box" pos="0.05150 0.00000 0.10000" size="0.00780 0.13585 0.00800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="freezer_drawer" pos="0.67500 0.65950 0.69500">
+      <joint name="freezer_drawer" type="slide" axis="0.00000 1.00000 0.00000" range="0.0000 0.5200" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_freezer_drawer" type="mesh" mesh="m_freezer_drawer" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_freezer_drawer_0" type="box" pos="0.49300 -0.26950 -0.02300" size="0.00700 0.26000 0.53500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_freezer_drawer_1" type="box" pos="-0.49300 -0.26950 -0.02300" size="0.00700 0.26000 0.53500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_freezer_drawer_2" type="box" pos="0.00000 -0.52250 -0.02300" size="0.48600 0.00700 0.53500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_freezer_drawer_3" type="box" pos="0.00000 -0.26950 -0.56400" size="0.48600 0.26000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_freezer_drawer_4" type="box" pos="0.00000 0.00000 0.00000" size="0.52500 0.00950 0.57000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_freezer_drawer_5" type="box" pos="0.00000 0.05150 0.52500" size="0.16000 0.00800 0.00780" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="fridge_door" pos="0.19000 0.66200 1.68000">
+      <joint name="fridge_door" type="hinge" axis="0.00000 0.00000 1.00000" range="0.0000 95.0000" damping="0.5"/>
+      <geom name="v_fridge_door" type="mesh" mesh="m_fridge_door" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_fridge_door_0" type="box" pos="0.52500 0.00000 0.00000" size="0.52500 0.02250 0.40000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_fridge_door_1" type="box" pos="0.52000 0.02800 0.00000" size="0.49000 0.00400 0.38500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_fridge_door_2" type="box" pos="1.00000 0.05450 0.00000" size="0.00780 0.00800 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="island_door" pos="1.74050 4.76300 0.27250">
+      <joint name="island_door" type="hinge" axis="0.00000 0.00000 1.00000" range="-100.0000 0.0000" damping="0.5"/>
+      <geom name="v_island_door" type="mesh" mesh="m_island_door" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_island_door_0" type="box" pos="0.00000 0.39000 0.00000" size="0.00950 0.39000 0.15050" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_island_door_1" type="box" pos="-0.04150 0.73000 0.00000" size="0.00780 0.00800 0.06321" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="lower_door_a" pos="0.65950 3.95300 0.27600">
+      <joint name="lower_door_a" type="hinge" axis="0.00000 0.00000 1.00000" range="-85.0000 0.0000" damping="0.5"/>
+      <geom name="v_lower_door_a" type="mesh" mesh="m_lower_door_a" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_lower_door_a_0" type="box" pos="0.00000 0.24700 0.00000" size="0.00950 0.24700 0.16300" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_lower_door_a_1" type="box" pos="0.04150 0.44400 0.00000" size="0.00780 0.00800 0.06846" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="lower_door_b" pos="0.65950 4.94700 0.48850">
+      <joint name="lower_door_b" type="hinge" axis="0.00000 0.00000 1.00000" range="0.0000 85.0000" damping="0.5"/>
+      <geom name="v_lower_door_b" type="mesh" mesh="m_lower_door_b" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_lower_door_b_0" type="box" pos="0.00000 -0.24700 0.00000" size="0.00950 0.24700 0.37550" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_lower_door_b_1" type="box" pos="0.04150 -0.44400 0.00000" size="0.00780 0.00800 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="oven_door" pos="0.66000 6.73000 1.49000">
+      <joint name="oven_door" type="hinge" axis="0.00000 1.00000 0.00000" range="-92.0000 0.0000" damping="0.5"/>
+      <geom name="v_oven_door" type="mesh" mesh="m_oven_door" contype="0" conaffinity="0" group="1" rgba="0.58 0.58 0.6 1"/>
+      <geom name="c_oven_door_0" type="box" pos="0.00000 0.00000 -0.23500" size="0.01200 0.29000 0.23500" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_oven_door_1" type="box" pos="0.01400 0.00000 -0.22900" size="0.00300 0.24500 0.19000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="ovencol_top_door" pos="0.65950 7.39700 2.13250">
+      <joint name="ovencol_top_door" type="hinge" axis="0.00000 0.00000 1.00000" range="0.0000 64.0000" damping="0.5"/>
+      <geom name="v_ovencol_top_door" type="mesh" mesh="m_ovencol_top_door" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_ovencol_top_door_0" type="box" pos="0.00000 -0.30000 0.00000" size="0.00950 0.30000 0.28750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_ovencol_top_door_1" type="box" pos="0.04150 -0.55000 0.00000" size="0.00780 0.00800 0.12075" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="pantry_drawer" pos="9.06000 0.74950 0.74000">
+      <joint name="pantry_drawer" type="slide" axis="0.00000 1.00000 0.00000" range="0.0000 0.4000" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_pantry_drawer" type="mesh" mesh="m_pantry_drawer" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_pantry_drawer_0" type="box" pos="0.39300 -0.26950 -0.00800" size="0.00700 0.26000 0.08000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_drawer_1" type="box" pos="-0.39300 -0.26950 -0.00800" size="0.00700 0.26000 0.08000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_drawer_2" type="box" pos="0.00000 -0.52250 -0.00800" size="0.38600 0.00700 0.08000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_drawer_3" type="box" pos="0.00000 -0.26950 -0.09400" size="0.38600 0.26000 0.00600" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_drawer_4" type="box" pos="0.00000 0.00000 0.00000" size="0.42500 0.00950 0.10000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_drawer_5" type="box" pos="0.00000 0.05150 0.05500" size="0.16000 0.00800 0.00780" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="pantry_slide" pos="8.85000 2.46000 1.15000">
+      <joint name="pantry_slide" type="slide" axis="-1.00000 0.00000 0.00000" range="0.0000 0.9500" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_pantry_slide" type="mesh" mesh="m_pantry_slide" contype="0" conaffinity="0" group="1" rgba="0.52 0.38 0.24 1"/>
+      <geom name="c_pantry_slide_0" type="box" pos="0.00000 0.00000 0.00000" size="0.53000 0.02000 1.11000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_slide_1" type="box" pos="0.47000 -0.04500 0.00000" size="0.01072 0.01100 0.25000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_slide_2" type="box" pos="-0.35000 0.00000 1.18500" size="0.01500 0.02200 0.02145" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_slide_3" type="box" pos="0.35000 0.00000 1.18500" size="0.01500 0.02200 0.02145" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_pantry_slide_4" type="box" pos="0.00000 -0.02400 0.00000" size="0.38000 0.00400 0.96000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="tall_door_a" pos="1.35300 0.65950 1.27650">
+      <joint name="tall_door_a" type="hinge" axis="0.00000 0.00000 1.00000" range="0.0000 92.0000" damping="0.5"/>
+      <geom name="v_tall_door_a" type="mesh" mesh="m_tall_door_a" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_tall_door_a_0" type="box" pos="0.22050 0.00000 0.00000" size="0.22050 0.00950 1.16350" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_tall_door_a_1" type="box" pos="0.39100 0.04150 0.00000" size="0.00780 0.00800 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="tall_door_b" pos="2.24700 0.65950 1.27650">
+      <joint name="tall_door_b" type="hinge" axis="0.00000 0.00000 1.00000" range="-92.0000 0.0000" damping="0.5"/>
+      <geom name="v_tall_door_b" type="mesh" mesh="m_tall_door_b" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_tall_door_b_0" type="box" pos="-0.22050 0.00000 0.00000" size="0.22050 0.00950 1.16350" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_tall_door_b_1" type="box" pos="-0.39100 0.04150 0.00000" size="0.00780 0.00800 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="upper_door_a" pos="0.35950 3.95300 1.85000">
+      <joint name="upper_door_a" type="hinge" axis="0.00000 0.00000 1.00000" range="-80.0000 0.0000" damping="0.5"/>
+      <geom name="v_upper_door_a" type="mesh" mesh="m_upper_door_a" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_upper_door_a_0" type="box" pos="0.00000 0.24700 0.00000" size="0.00950 0.24700 0.39700" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_upper_door_a_1" type="box" pos="0.04150 0.44400 0.00000" size="0.00780 0.00800 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="upper_door_b" pos="0.35950 4.94700 1.85000">
+      <joint name="upper_door_b" type="hinge" axis="0.00000 0.00000 1.00000" range="0.0000 80.0000" damping="0.5"/>
+      <geom name="v_upper_door_b" type="mesh" mesh="m_upper_door_b" contype="0" conaffinity="0" group="1" rgba="0.72 0.7 0.64 1"/>
+      <geom name="c_upper_door_b_0" type="box" pos="0.00000 -0.24700 0.00000" size="0.00950 0.24700 0.39700" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_upper_door_b_1" type="box" pos="0.04150 -0.44400 0.00000" size="0.00780 0.00800 0.15000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+    <body name="waste_pullout" pos="0.65950 2.10000 0.48600">
+      <joint name="waste_pullout" type="slide" axis="1.00000 0.00000 0.00000" range="0.0000 0.5500" damping="0.5" frictionloss="0.8"/>
+      <geom name="v_waste_pullout" type="mesh" mesh="m_waste_pullout" contype="0" conaffinity="0" group="1" rgba="0.6 0.5 0.4 1"/>
+      <geom name="c_waste_pullout_0" type="box" pos="-0.53000 -0.14000 -0.09000" size="0.00400 0.13000 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_1" type="box" pos="-0.28000 -0.14000 -0.13000" size="0.14000 0.10000 0.05000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_2" type="box" pos="-0.03000 -0.14000 -0.09000" size="0.00400 0.13000 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_3" type="box" pos="-0.28000 -0.27000 -0.09000" size="0.25000 0.00400 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_4" type="box" pos="-0.28000 -0.01000 -0.09000" size="0.25000 0.00400 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_5" type="box" pos="-0.53000 0.14000 -0.09000" size="0.00400 0.13000 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_6" type="box" pos="-0.03000 0.14000 -0.09000" size="0.00400 0.13000 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_7" type="box" pos="-0.28000 0.01000 -0.09000" size="0.25000 0.00400 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_8" type="box" pos="-0.28000 0.27000 -0.09000" size="0.25000 0.00400 0.21000" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_9" type="box" pos="-0.28000 0.00000 -0.31000" size="0.26000 0.27500 0.00750" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_10" type="box" pos="0.04200 0.00000 0.22000" size="0.00780 0.12500 0.00800" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+      <geom name="c_waste_pullout_11" type="box" pos="0.00000 0.00000 0.00000" size="0.00950 0.29700 0.37250" contype="1" conaffinity="1" group="3" rgba="0 0 0 0"/>
+    </body>
+  </worldbody>
+  <actuator/>
+  <keyframe>
+    <key name="closed" qpos="0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000"/>
+    <key name="half" qpos="-0.785398 0.000000 0.000000 0.000000 0.000000 0.000000 0.785398 0.000000 0.000000 0.000000 -0.785398 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000"/>
+    <key name="open" qpos="-1.570796 0.450000 0.450000 0.450000 0.450000 0.520000 1.605703 -1.658063 -1.466077 1.466077 -1.570796 1.082104 0.400000 0.950000 1.570796 -1.570796 -1.361357 1.361357 0.550000"/>
+  </keyframe>
+</mujoco>
