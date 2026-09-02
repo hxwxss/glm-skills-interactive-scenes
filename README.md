@@ -91,7 +91,6 @@ the conventions.
 ├── sim_ready/kitchen_mjcf/               MJCF + 42 visual meshes
 ├── renders/final/                        12-camera judgeset (Cycles)
 ├── videos/kitchen_promo.mp4              18 s promo (24 fps, H.264)
-├── docs/                                 validation evidence + iteration reviews
 ├── docs/                                 browser gallery (docs/index.html) + validation evidence
 ```
 
