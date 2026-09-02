@@ -22,8 +22,8 @@ video. No hand-fixes to the scene files.
 ## ⚡ Quick Start
 
 ```bash
-git clone https://github.com/hxwxss/glm-skills-interactive-kitchen.git
-cd glm-skills-interactive-kitchen
+git clone https://github.com/hxwxss/glm-skills-interactive-scenes.git
+cd glm-skills-interactive-scenes
 
 # Blender 4.1.1 (Linux, headless) rebuilds scene + IR from constants
 blender --background --factory-startup --python pipeline/build_scene.py
