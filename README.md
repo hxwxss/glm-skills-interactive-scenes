@@ -117,7 +117,6 @@ a 58/100 build looks like before the loop starts.
   boxes; no convex decomposition yet.
 - Sim visual meshes carry flat rgba, not baked PBR textures.
 - Appliance interiors are credible suggestions, not full models.
-- WSL2 could not enumerate the GPU for Cycles — renders are CPU (32 threads).
 
 ## 📄 License
 
