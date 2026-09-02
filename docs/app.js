@@ -11,7 +11,7 @@ renders.forEach((r, index) => {
   const card = document.createElement("figure");
   card.className = "render-card";
   card.innerHTML = `
-    <img src="../renders/final/${r.file}" alt="${r.title}" loading="lazy">
+    <img src="images/${r.file}" alt="${r.title}" loading="lazy">
     <figcaption>
       <span class="render-index">${String(index + 1).padStart(2, "0")}</span>
       ${r.title} — ${r.note}

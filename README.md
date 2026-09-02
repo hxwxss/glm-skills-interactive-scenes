@@ -55,7 +55,7 @@ cycle, inspected as pixels:
 | **Walk-in pantry** | real 1.5 m depth, jars, drawers | ![pantry](images/demo_pantry.png) |
 
 All 12 cameras live in [`renders/final/`](renders/final/); the 18-second promo in
-[`videos/`](videos/); a browser gallery in [`frontend/`](frontend/index.html)
+[`videos/`](videos/); a browser gallery at [`docs/index.html`](docs/index.html) (GitHub Pages–ready).
 (GitHub Pages–ready).
 
 ## 🧠 The Skill
@@ -76,22 +76,6 @@ Drop it into `~/.agents/skills/` and the agent can rerun the methodology on any
 new interior: copy the reference implementation, rewrite `kit_params.py`, keep
 the conventions.
 
-## 🧪 Validation results
-
-| Gate | Scope | Result |
-|---|---|---|
-| G1 scene/IR integrity | 104 stable ids, all names resolve, finite transforms | **PASS** |
-| G2 static geometry | pairwise AABB prefilter + whitelist | **PASS** (0 unexplained) |
-| G3 articulation sweep | 19 joints × 14 samples, AABB + **BVH mesh confirm** | **PASS** (0 hits) |
-| G4 navigation & tasks | r = 0.35 m robot disc on 15-segment route | **PASS** (≥ 60 mm everywhere) |
-| G6 cold start | fresh process: revalidate + re-render | **PASS** |
-| MJCF | MuJoCo 3.12 compile, 19/19 joints limited, 3 keyframes stable, worst contact −2 mm | **PASS** |
-
-Details in [`docs/final_validation.md`](docs/final_validation.md) and
-[`docs/validation_report.json`](docs/validation_report.json). The first-iteration
-review ([`docs/iteration_01_review.md`](docs/iteration_01_review.md)) shows what
-a 58/100 build looks like before the loop starts.
-
 ## 📁 Repository
 
 ```text
@@ -108,7 +92,7 @@ a 58/100 build looks like before the loop starts.
 ├── renders/final/                        12-camera judgeset (Cycles)
 ├── videos/kitchen_promo.mp4              18 s promo (24 fps, H.264)
 ├── docs/                                 validation evidence + iteration reviews
-└── frontend/                             browser gallery (GitHub Pages–ready)
+├── docs/                                 browser gallery (docs/index.html) + validation evidence
 ```
 
 ## 🙈 Honest limitations
