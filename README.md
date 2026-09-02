@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="images/demo_cooking.png" width="420"> &nbsp;
-  <img src="images/demo_interactions.png" width="420">
+  <a href="videos/kitchen_promo.mp4"><img src="images/kitchen_promo.gif" width="100%" alt="promo video"></a>
 </p>
 
 **One agent skill that turns a one-line prompt into a validated, interactive, MuJoCo-ready Blender scene — autonomously.**
