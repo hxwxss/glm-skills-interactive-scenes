@@ -1,10 +1,6 @@
 # GLM Skills · Sim-Ready Interactive Kitchen
 
 <p align="center">
-  <img src="images/banner.png" width="100%">
-</p>
-
-<p align="center">
   <a href="videos/kitchen_promo.mp4"><img src="images/kitchen_promo.gif" width="100%" alt="promo video"></a>
 </p>
 
