@@ -1,4 +1,4 @@
-# GLM Skills · Sim-Ready Interactive Kitchen
+# GLM Skills · Sim-Ready Interactive Scene
 
 <p align="center">
   <a href="videos/kitchen_promo.mp4"><img src="images/kitchen_promo.gif" width="100%" alt="promo video"></a>
